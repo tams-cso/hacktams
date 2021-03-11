@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Open+Sans:wght@400;500;700&display=swap');
 
 #root {
     --title-font: 'Patrick Hand', sans-serif;
-    --main-font: 'Roboto', sans-serif;
+    --main-font: 'Open Sans', sans-serif;
 }
 
 .app {
@@ -10,6 +10,7 @@
     min-height: 100%;
     height: 100%;
     font-family: var(--main-font);
+    font-weight: 500;
     font-size: 1rem;
 }
 
@@ -41,6 +42,8 @@
     border: none;
     border-radius: 0.5rem;
 
+    font-family: var(--main-font);
+    font-weight: 700;
     font-size: 1.25rem;
     background-color: white;
     cursor: pointer;
@@ -97,7 +100,9 @@
 
     border: 0.25rem solid black;
     border-radius: 0.5rem;
+    font-family: var(--main-font);
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .home-submit {
@@ -106,15 +111,16 @@
     border: 0.25rem solid black;
     border-radius: 0.5rem;
 
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-family: var(--title-font);
+    font-size: 1.5rem;
     background-color: white;
 
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
-.home-submit:hover {
+.home-submit:hover,
+.home-submit:focus {
     background-color: #ddd;
 }
 

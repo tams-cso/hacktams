@@ -19,7 +19,7 @@ class App extends React.Component {
     handleEmailChange = (event) => this.setState({ email: event.target.value });
 
     submit = () => {
-        console.log(`Email: ${this.state.email}`);
+        alert(`Entered email: ${this.state.email}`);
         // TODO: Make this button ACTUALLY submit the email lol
     }
 
@@ -49,7 +49,7 @@ class App extends React.Component {
                             value={this.state.email}
                             onChange={this.handleEmailChange}
                         ></input>
-                        <button className="home-submit" onClick={this.submit}>Sign up to our newsletter!</button>
+                        <button className="home-submit" onClick={this.submit}>Sign up for our newsletter!</button>
                     </div>
                 </div>
                 <div className="about" ref={this.about}>
