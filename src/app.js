@@ -21,7 +21,7 @@ class App extends React.Component {
     submit = () => {
         alert(`Entered email: ${this.state.email}`);
         // TODO: Make this button ACTUALLY submit the email lol
-    }
+    };
 
     render() {
         return (
@@ -49,16 +49,29 @@ class App extends React.Component {
                             value={this.state.email}
                             onChange={this.handleEmailChange}
                         ></input>
-                        <button className="home-submit" onClick={this.submit}>Sign up for our newsletter!</button>
+                        <button className="home-submit" onClick={this.submit}>
+                            Sign up for our newsletter!
+                        </button>
                     </div>
                 </div>
                 <div className="about" ref={this.about}>
-                    This is the about page!
+                    <h1 className="about-title">About Us</h1>
+                    <p className="about-info-box">
+                        We organize hackathons! A hackathon is a coding marathon where students come together to create
+                        an innovative project within only 24 hours. Projects can cover topics such as COVID-19,
+                        environment preservation, social good, and improving daily tasks in the form of a website,
+                        mobile app, machine learning models, hardware, and more. Your creativity is your only
+                        limitation! hackTAMS is part of the TAMS Computer Science Organization, and we host a beginner
+                        orientated high school hackathon from Denton, TX.
+                    </p>
                 </div>
                 <div className="events" ref={this.events}>
-                    Here are our events!
+                    <h1 className="events-title">Events</h1>
                 </div>
-                <div className="footer">Footer footer footer footer</div>
+                <div className="footer">
+                    Footer footer footer footer footer footer footer footer footer footer footer footer footer footer
+                    footer footer footer footer footer footer footer footer footer 
+                </div>
             </div>
         );
     }
