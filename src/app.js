@@ -39,6 +39,9 @@ class App extends React.Component {
                     <button className="navbar-item" onClick={this.navigate.bind(this, 'events')}>
                         Our Events
                     </button>
+                    <button className="navbar-item" onClick={this.navigate.bind(this, 'footer')}>
+                        Contact Us!
+                    </button>
                 </div>
                 <div className="home" ref={this.home}>
                     <div className="home-center-container">
