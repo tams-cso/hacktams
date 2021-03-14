@@ -6,7 +6,7 @@ class Event extends React.Component {
         return (
             <div className="event">
                 <div className="event-header">
-                    {header /* TODO have year, dates, # of teams, # of projects */}
+                    {/* TODO have year, dates, # of teams, # of projects */}
                 </div>
                 <div className="event-body">
                     {/* TODO have devpost link, site link, list of People */}
