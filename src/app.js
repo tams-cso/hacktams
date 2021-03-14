@@ -58,7 +58,7 @@ class App extends React.Component {
 
                 <div className="events" ref={this.events}>
                     <h1 className="events-title">Events</h1>
-                    <Event />
+                    <Event year='2020' />
                 </div>
                 <div className="footer" ref={this.contact}>
                     <h1 className="contact-us">Contact Us!</h1>
