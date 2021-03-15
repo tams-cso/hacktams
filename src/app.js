@@ -1,6 +1,8 @@
 import React from 'react';
-
-import { ReactComponent as Duck } from './logo.svg';
+import Menu from './components/menu';
+import Event from './components/event';
+import Footer from './components/footer';
+import FooterIcons from './components/footer_icons';
 import './app.css';
 
 class App extends React.Component {
@@ -11,6 +13,7 @@ class App extends React.Component {
         this.home = React.createRef();
         this.about = React.createRef();
         this.events = React.createRef();
+        this.contact = React.createRef();
         this.handleEmailChange = this.handleEmailChange.bind(this);
     }
 
@@ -26,23 +29,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <div className="navbar">
-                    <div className="navbar-item navbar-logo-container" onClick={this.navigate.bind(this, 'home')}>
-                        <Duck className="navbar-logo"></Duck>
-                    </div>
-                    <button className="navbar-item" onClick={this.navigate.bind(this, 'home')}>
-                        Home
-                    </button>
-                    <button className="navbar-item" onClick={this.navigate.bind(this, 'about')}>
-                        About Us
-                    </button>
-                    <button className="navbar-item" onClick={this.navigate.bind(this, 'events')}>
-                        Our Events
-                    </button>
-                    <button className="navbar-item" onClick={this.navigate.bind(this, 'footer')}>
-                        Contact Us!
-                    </button>
-                </div>
+                <Menu navigate={this.navigate} />
                 <div className="home" ref={this.home}>
                     <div className="home-center-container">
                         <h1 className="home-title">hackTAMS.</h1>
@@ -70,11 +57,10 @@ class App extends React.Component {
                 </div>
                 <div className="events" ref={this.events}>
                     <h1 className="events-title">Events</h1>
+
                 </div>
-                <div className="footer">
-                    Footer footer footer footer footer footer footer footer footer footer footer footer footer footer
-                    footer footer footer footer footer footer footer footer footer 
-                </div>
+                <Footer navigate={this.navigate} />
+                <FooterIcons navigate={this.navigate} />
             </div>
         );
     }
