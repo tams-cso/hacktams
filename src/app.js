@@ -1,8 +1,6 @@
 import React from 'react';
 import Menu from './components/menu';
-import Event from './components/event';
 import Footer from './components/footer';
-import FooterIcons from './components/footer_icons';
 import './app.css';
 
 class App extends React.Component {
@@ -59,8 +57,7 @@ class App extends React.Component {
                     <h1 className="events-title">Events</h1>
 
                 </div>
-                <Footer navigate={this.navigate} />
-                <FooterIcons navigate={this.navigate} />
+                    <Footer reference={this.contact}/>
             </div>
         );
     }
