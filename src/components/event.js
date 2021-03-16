@@ -4,7 +4,7 @@ import './event.css';
 class Event extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {dropOne: true, dropTwo: true};
+        this.state = {dropOne: false, dropTwo: false};
     }
 
     changeDropdown1 = () => {
@@ -28,7 +28,7 @@ class Event extends React.Component {
             <div className="event">
                 <div className="event-header" onClick={this.changeDropdown1}>
                     {/*{this.props.year}*/}
-                    <b>2021</b>
+                    <b>2021 (Oct 23)</b>
                     {/* TODO have year, dates, # of teams, # of projects */}
                 </div>
                 <div className={`event-body ${this.state.dropOne ? 'drop' : 'no-drop'}`}>
@@ -63,11 +63,11 @@ class Event extends React.Component {
                 </div>
                 <div className="event-header" onClick={this.changeDropdown2}>
                     {/*{this.props.year}*/}
-                    <b>2020</b>
+                    <b>2020 (Nov 6-8),  94 hackers, 44 projects</b>
                     {/* TODO have year, dates, # of teams, # of projects */}
                 </div>
                 <div className={`event-body ${this.state.dropTwo ? 'drop' : 'no-drop'}`}>
-                    <button className="devpost-button"><b>DEVPOST</b></button>
+                    <a href="https://hacktams2020f.devpost.com/"><button className="devpost-button"><b>DEVPOST</b></button></a>
                     <button className="github-button"><b>GITHUB</b></button>
                     <br/>
                     <button className="site-button"><b>HackTAMS 2020 Site</b></button>
