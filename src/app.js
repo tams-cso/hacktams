@@ -1,6 +1,5 @@
 import React from 'react';
 import Menu from './components/menu';
-import Event from './components/event';
 import About from './components/about';
 import Home from './components/home';
 import Footer from './components/footer';
