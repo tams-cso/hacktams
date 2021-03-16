@@ -22,13 +22,13 @@ class Event extends React.Component {
             </div>
         )
     }
-
+//in adheesh_branch
     render() {
         return (
             <div className="event">
                 <div className="event-header" onClick={this.changeDropdown1}>
                     {/*{this.props.year}*/}
-                    <b>2021 (Oct 23)</b>
+                    <b>2021 Coming Soon on October 23</b>
                     {/* TODO have year, dates, # of teams, # of projects */}
                 </div>
                 <div className={`event-body ${this.state.dropOne ? 'drop' : 'no-drop'}`}>
