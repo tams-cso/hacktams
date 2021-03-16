@@ -4,12 +4,12 @@ import './event.css';
 class Event extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {drop: true};
+        this.state = { drop: true };
     }
 
     changeDropdown = () => {
-        this.setState({drop: !this.state.drop});
-    }
+        this.setState({ drop: !this.state.drop });
+    };
 
     render() {
         return (

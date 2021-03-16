@@ -9,19 +9,19 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home" ref={this.props.reference}>
-                    <div className="home-center-container">
-                        <h1 className="home-title">hackTAMS.</h1>
-                        <input
-                            className="home-email-input"
-                            placeholder="Email"
-                            value={this.state.email}
-                            onChange={this.handleEmailChange}
-                        ></input>
-                        <button className="home-submit" onClick={this.submit}>
-                            Sign up for our newsletter!
-                        </button>
-                    </div>
+                <div className="home-center-container">
+                    <h1 className="home-title">hackTAMS.</h1>
+                    <input
+                        className="home-email-input"
+                        placeholder="Email"
+                        value={this.state.email}
+                        onChange={this.handleEmailChange}
+                    ></input>
+                    <button className="home-submit" onClick={this.submit}>
+                        Sign up for our newsletter!
+                    </button>
                 </div>
+            </div>
         );
     }
 }
