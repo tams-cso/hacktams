@@ -1,0 +1,53 @@
+/* Home view */
+
+.home {
+    padding-top: 4rem;
+    height: calc(100% - 4rem);
+
+    display: flex; /* Horizontally center content */
+    justify-content: center;
+}
+
+.home-center-container {
+    display: flex; /* Vertically center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-title {
+    margin: 0;
+    font-family: var(--title-font);
+    font-size: 10rem;
+}
+
+.home-email-input {
+    width: 25rem;
+    padding: 0.5rem;
+
+    border: 0.25rem solid black;
+    border-radius: 0.5rem;
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.home-submit {
+    width: 10rem;
+    margin: 1rem 0 10rem;
+    border: 0.25rem solid black;
+    border-radius: 0.5rem;
+
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    background-color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-submit:hover,
+.home-submit:focus {
+    background-color: #ddd;
+}
