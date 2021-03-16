@@ -22,7 +22,7 @@ class Event extends React.Component {
             </div>
         )
     }
-//in adheesh_branch
+
     render() {
         return (
             <div className="event">
