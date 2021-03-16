@@ -1,0 +1,11 @@
+/* About section */
+
+.about {
+    margin: 0 15vw 5rem;
+}
+
+.about-info-box {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
