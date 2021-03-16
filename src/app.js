@@ -57,7 +57,7 @@ class App extends React.Component {
                 </div>
                 <div className="events" ref={this.events}>
                     <h1 className="events-title">Events</h1>
-
+                    < Event />
                 </div>
                 <Footer navigate={this.navigate} />
                 <FooterIcons navigate={this.navigate} />
