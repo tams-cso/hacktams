@@ -4,11 +4,14 @@ import './event.css';
 class Event extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {drop: true};
+        this.state = {dropOne: true, dropTwo: true};
     }
 
-    changeDropdown = () => {
-        this.setState({drop: !this.state.drop});
+    changeDropdown1 = () => {
+        this.setState({dropOne: !this.state.dropOne});
+    }
+    changeDropdown2 = () => {
+        this.setState({dropTwo: !this.state.dropTwo});
     }
 
     personbox(name, imageUrl){
@@ -23,12 +26,12 @@ class Event extends React.Component {
     render() {
         return (
             <div className="event">
-                <div className="event-header" onClick={this.changeDropdown}>
+                <div className="event-header" onClick={this.changeDropdown1}>
                     {/*{this.props.year}*/}
                     <b>2021</b>
                     {/* TODO have year, dates, # of teams, # of projects */}
                 </div>
-                <div className={`event-body ${this.state.drop ? 'drop' : 'no-drop'}`}>
+                <div className={`event-body ${this.state.dropOne ? 'drop' : 'no-drop'}`}>
                     <button className="devpost-button"><b>DEVPOST</b></button>
                     <button className="github-button"><b>GITHUB</b></button>
                     <br/>
@@ -58,12 +61,12 @@ class Event extends React.Component {
                     </div>
                     {/* TODO have devpost link, site link, list of People */}
                 </div>
-                <div className="event-header" onClick={this.changeDropdown}>
+                <div className="event-header" onClick={this.changeDropdown2}>
                     {/*{this.props.year}*/}
                     <b>2020</b>
                     {/* TODO have year, dates, # of teams, # of projects */}
                 </div>
-                <div className={`event-body ${this.state.drop ? 'drop' : 'no-drop'}`}>
+                <div className={`event-body ${this.state.dropTwo ? 'drop' : 'no-drop'}`}>
                     <button className="devpost-button"><b>DEVPOST</b></button>
                     <button className="github-button"><b>GITHUB</b></button>
                     <br/>
