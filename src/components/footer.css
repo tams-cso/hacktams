@@ -12,20 +12,20 @@
     font-size: 1rem;
 }
 
-.footer-item {
+.footer-links {
     display: block;
-    text-align: center;
+    align-content: center;
   }
   
-.footer-item img {
+.item img{
       height: 40px;
       width: 40px;
-      margin: 0px -100px;
+      margin: 0px 50px;
       transform: scale(1);
       transition: filter 0.5s, transform 0.4s;
       flex-grow: 1;
 }
 
-.footer:hover img {
+.item:hover img{
       transform: scale(1.15);
 }
