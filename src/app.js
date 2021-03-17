@@ -14,7 +14,6 @@ class App extends React.Component {
         this.about = React.createRef();
         this.events = React.createRef();
         this.contact = React.createRef();
-        this.handleEmailChange = this.handleEmailChange.bind(this);
     }
 
     navigate = (location) => this[location].current.scrollIntoView();
