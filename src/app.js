@@ -27,7 +27,7 @@ class App extends React.Component {
                 <div className="events" ref={this.events}>
                     <h1 className="events-title">Events</h1>
                 </div>
-                <Footer reference={this.contact}/>
+                <Footer reference={this.contact} />
             </div>
         );
     }
