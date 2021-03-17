@@ -39,24 +39,24 @@ class Event extends React.Component {
                     <br/>
                     <h2>Participants:</h2>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     {this.personbox("Bob bobby", '../images/test_image.png')}
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     {/* TODO have devpost link, site link, list of People */}
@@ -74,27 +74,27 @@ class Event extends React.Component {
                     <br/>
                     <h2>Participants:</h2>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="../images/test_image.png" />
+                        <img src="../images/test_image.png" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     <div className="person-box">
-                        <img src="" />
+                        <img src="" alt="Person face" />
                         Person Name
                     </div>
                     {/* TODO have devpost link, site link, list of People */}
