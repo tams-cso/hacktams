@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/744489ae-e351-4ea0-9054-670d947b244d/deploy-status)](https://app.netlify.com/sites/hacktams/deploys)
+
 # hackTAMS Official Site
 
 This is the official site for hackTAMS! Feel free to look around and make a pull request to request changes.
