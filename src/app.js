@@ -14,17 +14,9 @@ class App extends React.Component {
         this.about = React.createRef();
         this.events = React.createRef();
         this.contact = React.createRef();
-        this.handleEmailChange = this.handleEmailChange.bind(this);
     }
 
     navigate = (location) => this[location].current.scrollIntoView();
-
-    handleEmailChange = (event) => this.setState({ email: event.target.value });
-
-    submit = () => {
-        alert(`Entered email: ${this.state.email}`);
-        // TODO: Make this button ACTUALLY submit the email lol
-    };
 
     render() {
         return (
