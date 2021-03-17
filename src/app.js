@@ -3,6 +3,7 @@ import Menu from './components/menu';
 import About from './components/about';
 import Home from './components/home';
 import Footer from './components/footer';
+import Event from './components/event';
 
 import './app.css';
 
@@ -27,7 +28,8 @@ class App extends React.Component {
                 <div className="events" ref={this.events}>
                     <h1 className="events-title">Events</h1>
                 </div>
-                <Footer reference={this.contact} />
+                <Event reference={this.events} />
+                <Footer reference={this.contact}/>
             </div>
         );
     }
