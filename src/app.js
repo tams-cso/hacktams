@@ -19,13 +19,6 @@ class App extends React.Component {
 
     navigate = (location) => this[location].current.scrollIntoView();
 
-    handleEmailChange = (event) => this.setState({ email: event.target.value });
-
-    submit = () => {
-        alert(`Entered email: ${this.state.email}`);
-        // TODO: Make this button ACTUALLY submit the email lol
-    };
-
     render() {
         return (
             <div className="app">

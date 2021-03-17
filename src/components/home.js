@@ -6,6 +6,14 @@ class Home extends React.Component {
         super(props);
         this.state = { email: '' };
     }
+
+    handleEmailChange = (event) => this.setState({ email: event.target.value });
+
+    submit = () => {
+        alert(`Entered email: ${this.state.email}`);
+        // TODO: Make this button ACTUALLY submit the email lol
+    };
+    
     render() {
         return (
             <div className="home" ref={this.props.reference}>
