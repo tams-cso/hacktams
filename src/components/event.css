@@ -1,61 +1,66 @@
-.event-header{
-    background-color: lightslategray;
-    border-radius:10px;
-    padding:10px;
-    margin: 10px;
+.event-header {
+    display: flex;
+    padding: 0.75rem 0.5rem;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.event-body{
-    background-color: lightsteelblue;
-    border-radius:10px;
-    padding:10px;
-    margin:10px;
+.event-body {
+    display: none;
+    margin: 0.5rem;
+    border: 0.25rem solid black;
+    border-top: none;
 }
 
-.devpost-button{
-    background-color:rgb(39, 109, 189);
-    padding:10px;
-    border:none;
-    border-radius: 10px;
-    margin: 10px;
-    display:inline-block;
-    font-size:16px;
-    cursor: pointer;
+.down {
+    display: block;
 }
 
-.github-button{
-    background-color:rgb(182, 71, 204);
-    padding:10px;
-    border:none;
-    border-radius: 10px;
-    margin: 10px;
-    display:inline-block;
-    font-size:16px;
-    cursor: pointer;
+.header-line {
+    height: 0.2rem;
+    border-radius: 1rem;
+    background-color: black;
+
+    flex-grow: 1;
 }
 
-.site-button{
-    background-color:rgb(255, 255, 255);
-    padding:10px;
-    border:none;
-    border-radius: 10px;
-    margin: 10px;
-    display:inline-block;
-    font-size:16px;
-    cursor: pointer;
+.header-date {
+    display: flex;
+    padding: 0 1rem;
+
+    font-family: var(--title-font);
+
+    flex-direction: column;
+    align-items: center;
 }
 
-.person-box{
-    background-color:black;
-    padding:10px;
-    border-radius:10px;
-    margin:5px;
-    display:inline-block;
-    color:white;
+.header-year {
+    margin: 0;
+    width: fit-content;
+    font-size: 2rem;
 }
 
-.no-drop{
-    visibility:hidden;
-    height:0px;
-    margin:0px;
+.header-dates {
+    margin: 0;
+    width: fit-content;
+    font-size: 1.5rem;
+}
+
+/* .header-participants {
+
+}
+
+.header-projects {
+
+} */
+
+.body-links {
+    display: flex;
+
+}
+
+.body-team-list {
+    display: flex;
 }

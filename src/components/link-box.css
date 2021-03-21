@@ -1,0 +1,22 @@
+.link-box {
+    border: 0.1rem solid;
+    padding: 0.25rem;
+    width: fit-content;
+
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.link-box:hover {
+    background-color: #dddddd;
+}
+
+/* .active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+} */

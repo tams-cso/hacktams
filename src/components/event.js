@@ -1,103 +1,52 @@
 import React from 'react';
 import './event.css';
+import LinkBox from './link-box';
 
 class Event extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {dropOne: false, dropTwo: false};
+        this.state = { dropdown: false };
     }
 
-    changeDropdown1 = () => {
-        this.setState({dropOne: !this.state.dropOne});
-    }
-    changeDropdown2 = () => {
-        this.setState({dropTwo: !this.state.dropTwo});
-    }
+    changeDropdown = () => {
+        this.setState({ dropdown: !this.state.dropdown });
+    };
 
-    personbox(name, imageUrl){
-        return(
+    personbox(name, imageUrl) {
+        return (
             <div className="person-box">
-                <img src= {imageUrl} alt="hackTAMS participant" />
+                <img src={imageUrl} alt="hackTAMS participant" />
                 {name}
             </div>
-        )
+        );
     }
 
+    createTeamComponents = (year) => {
+        //TODO read json files for data
+        //use Person component
+    };
+
     render() {
+        const teamComponents = this.createTeamComponents(this.props.year);
+
         return (
             <div className="event">
-                <div className="event-header" onClick={this.changeDropdown1}>
-                    {/*{this.props.year}*/}
-                    <b>2021 Coming Soon on October 23</b>
-                    {/* TODO have year, dates, # of teams, # of projects */}
+                <div className="event-header" onClick={this.changeDropdown}>
+                    <div className="header-line"></div>
+                    <div className="header-date">
+                        <p className="header-year">{this.props.year}</p>
+                        <p className="header-dates">{this.props.date}</p>
+                    </div>
+                    <div className="header-line"></div>
+                    {/* <div className="header-participants"></div>
+                    <div className="header-projects"></div> */}
                 </div>
-                <div className={`event-body ${this.state.dropOne ? 'drop' : 'no-drop'}`}>
-                    <button className="devpost-button"><b>DEVPOST</b></button>
-                    <button className="github-button"><b>GITHUB</b></button>
-                    <br/>
-                    <button className="site-button"><b>HackTAMS 2021 Site</b></button>
-                    <br/>
-                    <h2>Participants:</h2>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
+                <div className={`event-body ${this.state.dropdown ? 'down' : ''}`}>
+                    <div className="body-links">
+                        <LinkBox link="">Devpost</LinkBox>
+                        <LinkBox link="">Site</LinkBox>
                     </div>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    {this.personbox("Bob bobby", '../images/test_image.png')}
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    {/* TODO have devpost link, site link, list of People */}
-                </div>
-                <div className="event-header" onClick={this.changeDropdown2}>
-                    {/*{this.props.year}*/}
-                    <b>2020 (Nov 6-8),  94 hackers, 44 projects</b>
-                    {/* TODO have year, dates, # of teams, # of projects */}
-                </div>
-                <div className={`event-body ${this.state.dropTwo ? 'drop' : 'no-drop'}`}>
-                    <a href="https://hacktams2020f.devpost.com/"><button className="devpost-button"><b>DEVPOST</b></button></a>
-                    <button className="github-button"><b>GITHUB</b></button>
-                    <br/>
-                    <button className="site-button"><b>HackTAMS 2020 Site</b></button>
-                    <br/>
-                    <h2>Participants:</h2>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="../images/test_image.png" alt="Person face" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" alt="Person face" />
-                        Person Name
-                    </div>
-                    {/* TODO have devpost link, site link, list of People */}
+                    <div className="body-team-list">{teamComponents}</div>
                 </div>
             </div>
         );
