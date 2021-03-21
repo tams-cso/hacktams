@@ -28,12 +28,8 @@ class App extends React.Component {
                 <div className="events" ref={this.events}>
                     <h1 className="events-title">Events</h1>
                 </div>
-<<<<<<< HEAD
                 <Event reference={this.events} />
                 <Footer reference={this.contact}/>
-=======
-                <Footer reference={this.contact} />
->>>>>>> c0d2458... Fix file formatting
             </div>
         );
     }
