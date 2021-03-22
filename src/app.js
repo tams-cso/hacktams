@@ -17,7 +17,7 @@ class App extends React.Component {
         this.contact = React.createRef();
     }
 
-    navigate = (location) => this[location].current.scrollIntoView();
+    navigate = (location) => this[location].current.scrollIntoView({ behavior: 'smooth' });
 
     render() {
         return (

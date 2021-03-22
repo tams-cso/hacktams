@@ -23,5 +23,6 @@ h1 {
 /* List of events */
 
 .events {
-    margin: 0 15vw 5rem;
+    margin: 0 15vw;
+    padding-top: 5rem;
 }
