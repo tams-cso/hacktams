@@ -1,103 +1,65 @@
 import React from 'react';
 import './event.css';
+import LinkBox from './link-box';
+import Person from './person';
 
 class Event extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {dropOne: false, dropTwo: false};
+        this.state = { dropdown: false };
     }
 
-    changeDropdown1 = () => {
-        this.setState({dropOne: !this.state.dropOne});
-    }
-    changeDropdown2 = () => {
-        this.setState({dropTwo: !this.state.dropTwo});
-    }
+    changeDropdown = () => {
+        this.setState({ dropdown: !this.state.dropdown });
+    };
 
-    personbox(name, imageUrl){
-        return(
-            <div className="person-box">
-                <img src= {imageUrl} alt="hackTAMS participant" />
-                {name}
+    createTeamComponents = (data) => {
+        const teamlist = [];
+        data.sort((a, b) => (a.name < b.name ? -1 : 1));
+        data.forEach((person) => {
+            teamlist.push(<Person key={person.name} info={person} />);
+        });
+        return teamlist;
+    };
+
+    createInfo = (info) => {
+        if (info === null)
+            return (
+                <div className="header-info">
+                    <p className="header-description-soon">Coming Soon</p>
+                </div>
+            );
+        return (
+            <div className="header-info">
+                <p className="header-description align-right">{`${info.participants} participants`}</p>
+                <div className="header-dot"></div>
+                <p className="header-description align-left">{`${info.projects} projects`}</p>
             </div>
-        )
-    }
+        );
+    };
 
     render() {
+        const data = require(`../data/${this.props.year}.json`);
+        const info = this.createInfo(data.info);
+        const teamComponents = this.createTeamComponents(data.team);
+
         return (
             <div className="event">
-                <div className="event-header" onClick={this.changeDropdown1}>
-                    {/*{this.props.year}*/}
-                    <b>2021 Coming Soon on October 23</b>
-                    {/* TODO have year, dates, # of teams, # of projects */}
+                <div className="event-header" onClick={this.changeDropdown}>
+                    <div className="header-line"></div>
+                    <div className="header-date">
+                        <p className="header-year">{data.year}</p>
+                        <p className="header-dates">{data.dates}</p>
+                    </div>
+                    <div className="header-line"></div>
+                    {info}
                 </div>
-                <div className={`event-body ${this.state.dropOne ? 'drop' : 'no-drop'}`}>
-                    <button className="devpost-button"><b>DEVPOST</b></button>
-                    <button className="github-button"><b>GITHUB</b></button>
-                    <br/>
-                    <button className="site-button"><b>HackTAMS 2021 Site</b></button>
-                    <br/>
-                    <h2>Participants:</h2>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
+                <div className={`event-body ${this.state.dropdown ? 'down' : ''}`}>
+                    <div className="body-links">
+                        <LinkBox link={data.devpost}>Devpost</LinkBox>
+                        <LinkBox link={data.site}>Site</LinkBox>
                     </div>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    {this.personbox("Bob bobby", '../images/test_image.png')}
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    {/* TODO have devpost link, site link, list of People */}
-                </div>
-                <div className="event-header" onClick={this.changeDropdown2}>
-                    {/*{this.props.year}*/}
-                    <b>2020 (Nov 6-8),  94 hackers, 44 projects</b>
-                    {/* TODO have year, dates, # of teams, # of projects */}
-                </div>
-                <div className={`event-body ${this.state.dropTwo ? 'drop' : 'no-drop'}`}>
-                    <a href="https://hacktams2020f.devpost.com/"><button className="devpost-button"><b>DEVPOST</b></button></a>
-                    <button className="github-button"><b>GITHUB</b></button>
-                    <br/>
-                    <button className="site-button"><b>HackTAMS 2020 Site</b></button>
-                    <br/>
-                    <h2>Participants:</h2>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="../images/test_image.png" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    <div className="person-box">
-                        <img src="" />
-                        Person Name
-                    </div>
-                    {/* TODO have devpost link, site link, list of People */}
+                    <div className="body-team-list">{teamComponents}</div>
                 </div>
             </div>
         );

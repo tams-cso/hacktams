@@ -7,27 +7,48 @@ import Twitter from '../images/twitter_icon.svg';
 import YouTube from '../images/yt_icon_rgb.png';
 
 class Footer extends React.Component {
+    openSite = (site) => {
+        if (site !== '') window.open(site);
+    };
+
     render() {
-        return [
+        return (
             <div className="footer" ref={this.props.reference}>
-                <h1 className="contact-us">Contact Us!</h1>
-                <p className="contact-us-info-box">
+                <h1 className="footer-title">Contact Us!</h1>
+                <p className="footer-info">
                     Made with &hearts; in Denton, Texas!<br></br>
-                    Contact us at <a href="mailto: team@hacktams.org">team@hacktams.org</a><br></br>
+                    Contact us at <a href="mailto: team@hacktams.org">team@hacktams.org</a>
+                    <br></br>
                     Want to sponsor us? Email us at <a href="mailto: sponsor@hacktams.org">sponsor@hacktams.org</a>
                 </p>
-            </div>,
-            <div className="footer-item">
-                <a href="https://www.facebook.com/hackTAMS" target="_blank" rel="noopener noreferrer" class="footer item">
-                    <img src={FB} alt="Facebook" /></a>
-                <a href="https://www.instagram.com/hacktams/?hl=en" target="_blank" rel="noopener noreferrer" class="footer item">
-                    <img src={Insta} alt="Instagram" /></a>
-                <a href="https://twitter.com/thehackTAMS" target="_blank" rel="noopener noreferrer" class="footer item">
-                    <img src={Twitter} alt="Twitter" /></a>
-                <a href="https://www.youtube.com/channel/UCVe1eL6FUcxay8gQ_BtHOjA" target="_blank" rel="noopener noreferrer" class="footer item">
-                    <img src={YouTube} alt="YouTube" /></a>
+                <div className="footer-links">
+                    <img
+                        src={FB}
+                        alt="Facebook"
+                        className="footer-item"
+                        onClick={this.openSite.bind(this, 'https://www.facebook.com/hackTAMS')}
+                    />
+                    <img
+                        src={Insta}
+                        alt="Instagram"
+                        className="footer-item"
+                        onClick={this.openSite.bind(this, 'https://www.instagram.com/hacktams/?hl=en')}
+                    />
+                    <img
+                        src={Twitter}
+                        alt="Twitter"
+                        className="footer-item"
+                        onClick={this.openSite.bind(this, 'https://twitter.com/thehackTAMS')}
+                    />
+                    <img
+                        src={YouTube}
+                        alt="YouTube"
+                        className="footer-item"
+                        onClick={this.openSite.bind(this, 'https://www.youtube.com/channel/UCVe1eL6FUcxay8gQ_BtHOjA')}
+                    />
+                </div>
             </div>
-        ]
+        );
     }
 }
 

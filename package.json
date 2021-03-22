@@ -2,7 +2,6 @@
   "name": "hacktams",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tams-cso.github.io/hacktams",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

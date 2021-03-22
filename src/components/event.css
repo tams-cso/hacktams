@@ -1,61 +1,121 @@
-.event-header{
-    background-color: lightslategray;
-    border-radius:10px;
-    padding:10px;
-    margin: 10px;
-}
+.event-header {
+    display: flex;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.75rem;
 
-.event-body{
-    background-color: lightsteelblue;
-    border-radius:10px;
-    padding:10px;
-    margin:10px;
-}
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-.devpost-button{
-    background-color:rgb(39, 109, 189);
-    padding:10px;
-    border:none;
-    border-radius: 10px;
-    margin: 10px;
-    display:inline-block;
-    font-size:16px;
     cursor: pointer;
 }
 
-.github-button{
-    background-color:rgb(182, 71, 204);
-    padding:10px;
-    border:none;
-    border-radius: 10px;
-    margin: 10px;
-    display:inline-block;
-    font-size:16px;
-    cursor: pointer;
+.event-header:hover {
+    background-color: #ddd;
+    transition: 0.3s;
 }
 
-.site-button{
-    background-color:rgb(255, 255, 255);
-    padding:10px;
-    border:none;
-    border-radius: 10px;
-    margin: 10px;
-    display:inline-block;
-    font-size:16px;
-    cursor: pointer;
+.event-body {
+    display: none;
+    margin: 0.5rem;
+    border: 0.25rem solid black;
+    border-top: none;
 }
 
-.person-box{
-    background-color:black;
-    padding:10px;
-    border-radius:10px;
-    margin:5px;
-    display:inline-block;
-    color:white;
+.down {
+    display: block;
 }
 
-.no-drop{
-    visibility:hidden;
-    height:0px;
-    margin:0px;
+.header-line {
+    height: 0.2rem;
+    min-width: 25vw;
+    border-radius: 1rem;
+    background-color: black;
+
+    flex-grow: 1;
+}
+
+.header-line {
+    height: 0.2rem;
+    min-width: 25vw;
+    border-radius: 1rem;
+    background-color: black;
+
+    flex-grow: 1;
+}
+
+.header-info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.header-description {
+    margin: 0.5rem 0.5rem 0;
+    width: 9.5rem;
+    font-size: 1.2rem;
+}
+
+.header-description-soon {
+    margin: 0.5rem 1.5rem 0;
+    font-size: 1.2rem;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.header-dot {
+    margin: 1.25rem 0.5rem 0;
+    height: 0.2rem;
+    width: 0.2rem;
+    border-radius: 1rem;
+    background-color: black;
+}
+
+.header-date {
+    display: flex;
+    padding: 0 1rem;
+
+    font-family: var(--title-font);
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-year {
+    margin: 0;
+    width: fit-content;
+    font-size: 2rem;
+}
+
+.header-dates {
+    margin: 0;
+    width: fit-content;
+    font-size: 1.5rem;
+}
+
+/* .header-participants {
+
+}
+
+.header-projects {
+
+} */
+
+.body-links {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.body-team-list {
+    display: grid;
+    padding: 0.5rem;
+    grid-template-columns: repeat(5, 1fr);
 }

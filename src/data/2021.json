@@ -1,0 +1,114 @@
+{
+    "year": "2021",
+    "dates": "October 23",
+    "info": null,
+    "devpost": null,
+    "site": "https://2021.hacktams.org/",
+    "team": [
+        {
+            "name": "Rohit Rajan",
+            "position": "Logistics Lead",
+            "image": ""
+        },
+        {
+            "name": "Kapil Yadav",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Zhuoli Xie",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Abhijay Achukola",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Andrew Zheng",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Kane Dong",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Joanne Liu",
+            "position": "Design Lead",
+            "image": ""
+        },
+        {
+            "name": "Michael Zhao",
+            "position": "Design",
+            "image": ""
+        },
+        {
+            "name": "Lauren Nicolas",
+            "position": "Outreach Lead",
+            "image": ""
+        },
+        {
+            "name": "Aurelia Wang",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Dylan Li",
+            "position": "Dev Lead",
+            "image": ""
+        },
+        {
+            "name": "Anirudh Kaza",
+            "position": "Dev",
+            "image": ""
+        },
+        {
+            "name": "Aaron Mathews",
+            "position": "Dev",
+            "image": ""
+        },
+        {
+            "name": "Adheesh Kadiresan",
+            "position": "Dev",
+            "image": ""
+        },
+        {
+            "name": "Kanav Bengani",
+            "position": "Sponsorships Lead",
+            "image": ""
+        },
+        {
+            "name": "Shweta Kumaran",
+            "position": "Sponsorships",
+            "image": ""
+        },
+        {
+            "name": "Satwik Chalasani",
+            "position": "Sponsorships",
+            "image": ""
+        },
+        {
+            "name": "Stephanie You",
+            "position": "Marketing Lead",
+            "image": ""
+        },
+        {
+            "name": "Brianna Chan",
+            "position": "Marketing",
+            "image": ""
+        },
+        {
+            "name": "Ben Wang",
+            "position": "Marketing",
+            "image": ""
+        },
+        {
+            "name": "Jeongwoo Choi",
+            "position": "Logistics",
+            "image": ""
+        }
+    ]
+}
