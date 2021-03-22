@@ -30,7 +30,6 @@ class App extends React.Component {
                     <Event year="2021" />
                     <Event year="2020" />
                 </div>
-
                 <Footer reference={this.contact} />
             </div>
         );

@@ -45,6 +45,12 @@
     flex-grow: 1;
 }
 
+.header-info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .header-description {
     margin: 0.5rem 0.5rem 0;
     width: 9.5rem;
@@ -52,7 +58,7 @@
 }
 
 .header-description-soon {
-    margin: 0.5rem 0.5rem 0;
+    margin: 0.5rem 1.5rem 0;
     font-size: 1.2rem;
 }
 
@@ -65,7 +71,7 @@
 }
 
 .header-dot {
-    margin: 0.5rem 0.5rem 0;
+    margin: 1.25rem 0.5rem 0;
     height: 0.2rem;
     width: 0.2rem;
     border-radius: 1rem;

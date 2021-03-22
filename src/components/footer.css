@@ -1,32 +1,26 @@
 /*Footer stuff*/
 .footer {
-    margin-top: 0px;
-    margin-right: 10vw;
-    margin-bottom: 0.5rem;
-    margin-left: 10vw;
+    margin: 0 15vw 1rem;
     text-align: center;
 }
 
-.contact-us-info-box {
+.footer-info {
     margin: 0 10vw;
     padding: 0.5rem 0;
     font-size: 1rem;
 }
 
-.footer-item {
-    display: block;
-    text-align: center;
-  }
-  
-.footer-item img {
-      height: 40px;
-      width: 40px;
-      margin: 0px -100px;
-      transform: scale(1);
-      transition: filter 0.5s, transform 0.4s;
-      flex-grow: 1;
+.footer-links {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.footer:hover img {
-      transform: scale(1.15);
+.footer-item {
+    height: 40px;
+    width: 40px;
+}
+
+.footer-item:hover {
+    transition: 0.3s;
+    transform: scale(1.15);
 }
