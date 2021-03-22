@@ -20,7 +20,7 @@ class Home extends React.Component {
         return (
             <div className="home" ref={this.props.reference}>
                 <div className="home-center-container">
-                    <h1 className="home-title">hackTAMS.</h1>
+                    <h1 className="home-title">hackTAMS</h1>
                     <input
                         className="home-email-input"
                         placeholder="Email"

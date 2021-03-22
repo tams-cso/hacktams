@@ -1,8 +1,7 @@
 /* Home view */
 
 .home {
-    padding-top: 4rem;
-    height: calc(100% - 4rem);
+    margin: 5rem 15vw 0;
 
     display: flex; /* Horizontally center content */
     justify-content: center;
@@ -35,7 +34,7 @@
 
 .home-submit {
     width: 10rem;
-    margin: 1rem 0 10rem;
+    margin: 1rem;
     border: 0.25rem solid black;
     border-radius: 0.5rem;
 
