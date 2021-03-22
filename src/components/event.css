@@ -1,10 +1,19 @@
 .event-header {
     display: flex;
     padding: 0.75rem 0.5rem;
+    border-radius: 0.75rem;
 
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
+}
+
+.event-header:hover {
+    background-color: #ddd;
+    transition: 0.3s;
 }
 
 .event-body {
@@ -20,10 +29,16 @@
 
 .header-line {
     height: 0.2rem;
+    min-width: 25vw;
     border-radius: 1rem;
     background-color: black;
 
     flex-grow: 1;
+}
+
+.header-description {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
 }
 
 .header-date {
@@ -58,9 +73,12 @@
 
 .body-links {
     display: flex;
-
+    padding: 0.5rem;
+    justify-content: center;
 }
 
 .body-team-list {
-    display: flex;
+    display: grid;
+    padding: 0.5rem;
+    grid-template-columns: repeat(5, 1fr);
 }

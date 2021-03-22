@@ -1,6 +1,7 @@
 .link-box {
     border: 0.1rem solid;
     padding: 0.25rem;
+    margin: 0 0.5rem;
     width: fit-content;
 
     text-align: center;

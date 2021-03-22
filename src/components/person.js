@@ -6,8 +6,8 @@ class Person extends React.Component {
         return (
             <div className="person">
                 <div className="person-img"></div>
-                <div className="person-name"></div>
-                <div className="person-position"></div>
+                <div className="person-name">{this.props.info.name}</div>
+                <div className="person-position">{this.props.info.position}</div>
             </div>
         );
     }

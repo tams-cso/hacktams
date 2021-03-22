@@ -27,8 +27,8 @@ class App extends React.Component {
                 <About reference={this.about} />
                 <div className="events" ref={this.events}>
                     <h1 className="events-title">Events</h1>
-                    <Event year="2021" date="October 23" />
-                    <Event year="2020" date="November 7-8" />
+                    <Event year="2021" />
+                    {/* <Event year="2020" /> */}
                 </div>
 
                 <Footer reference={this.contact} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import './event.css';
 import LinkBox from './link-box';
+import Person from './person';
 
 class Event extends React.Component {
     constructor(props) {
@@ -12,34 +13,38 @@ class Event extends React.Component {
         this.setState({ dropdown: !this.state.dropdown });
     };
 
-    personbox(name, imageUrl) {
-        return (
-            <div className="person-box">
-                <img src={imageUrl} alt="hackTAMS participant" />
-                {name}
-            </div>
-        );
-    }
+    createTeamComponents = (data) => {
+        const teamlist = [];
+        data.forEach((person) => {
+            teamlist.push(<Person info={person} />);
+        });
+        return teamlist;
+    };
 
-    createTeamComponents = (year) => {
-        //TODO read json files for data
-        //use Person component
+    createInfo = (info) => {
+        const data = [];
+        data.push(<p className="header-description">{info.shift()}</p>);
+        info.forEach((item) => {
+            data.push(<p className="header-description">{item}</p>);
+        });
+        return data;
     };
 
     render() {
-        const teamComponents = this.createTeamComponents(this.props.year);
+        const data = require(`../data/${this.props.year}.json`);
+        const info = this.createInfo(data.info);
+        const teamComponents = this.createTeamComponents(data.team);
 
         return (
             <div className="event">
                 <div className="event-header" onClick={this.changeDropdown}>
                     <div className="header-line"></div>
                     <div className="header-date">
-                        <p className="header-year">{this.props.year}</p>
-                        <p className="header-dates">{this.props.date}</p>
+                        <p className="header-year">{data.year}</p>
+                        <p className="header-dates">{data.dates}</p>
                     </div>
                     <div className="header-line"></div>
-                    {/* <div className="header-participants"></div>
-                    <div className="header-projects"></div> */}
+                    {info}
                 </div>
                 <div className={`event-body ${this.state.dropdown ? 'down' : ''}`}>
                     <div className="body-links">
