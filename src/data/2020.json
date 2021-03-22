@@ -1,3 +1,11 @@
 {
-    
+    "year": "2020",
+    "dates": "October 6-8",
+    "info": {
+        "participants": 0,
+        "projects": 0
+    },
+    "devpost": "https://hacktams2020f.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "site": "https://2020.hacktams.org/",
+    "team": []
 }
