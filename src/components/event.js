@@ -15,6 +15,7 @@ class Event extends React.Component {
 
     createTeamComponents = (data) => {
         const teamlist = [];
+        data.sort((a, b) => a.name < b.name ? -1 : 1);
         data.forEach((person) => {
             teamlist.push(<Person info={person} />);
         });
@@ -22,11 +23,13 @@ class Event extends React.Component {
     };
 
     createInfo = (info) => {
-        const data = [];
-        data.push(<p className="header-description">{info.shift()}</p>);
-        info.forEach((item) => {
-            data.push(<p className="header-description">{item}</p>);
-        });
+        if (info === null)
+            return <p className="header-description-soon">Coming Soon</p>;
+        const data = [
+            <p className="header-description align-right">{`${info.participants} participants`}</p>,
+            <div className="header-dot"></div>,
+            <p className="header-description align-left">{`${info.projects} projects`}</p>
+        ];
         return data;
     };
 
@@ -48,8 +51,8 @@ class Event extends React.Component {
                 </div>
                 <div className={`event-body ${this.state.dropdown ? 'down' : ''}`}>
                     <div className="body-links">
-                        <LinkBox link="">Devpost</LinkBox>
-                        <LinkBox link="">Site</LinkBox>
+                        <LinkBox link={data.devpost}>Devpost</LinkBox>
+                        <LinkBox link={data.site}>Site</LinkBox>
                     </div>
                     <div className="body-team-list">{teamComponents}</div>
                 </div>

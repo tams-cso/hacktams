@@ -1,9 +1,9 @@
 {
     "year": "2021",
     "dates": "October 23",
-    "info": ["Coming soon"],
-    "devpost": "",
-    "site": "site",
+    "info": null,
+    "devpost": null,
+    "site": "https://2021.hacktams.org/",
     "team": [
         {
             "name": "Rohit Rajan",
@@ -107,7 +107,7 @@
         },
         {
             "name": "Jeongwoo Choi",
-            "position": "Other",
+            "position": "Logistics",
             "image": ""
         }
     ]

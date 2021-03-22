@@ -5,7 +5,7 @@ class LinkBox extends React.Component {
     render() {
         return (
             <div
-                className={`link-box${this.props.link !== '' ? ' active' : ' inactive'}`}
+                className={`link-box${this.props.link !== null ? ' active' : ' inactive'}`}
                 onClick={() => {
                     window.open(this.props.link);
                 }}

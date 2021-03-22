@@ -36,9 +36,40 @@
     flex-grow: 1;
 }
 
+.header-line {
+    height: 0.2rem;
+    min-width: 25vw;
+    border-radius: 1rem;
+    background-color: black;
+
+    flex-grow: 1;
+}
+
 .header-description {
-    margin: 0.5rem 0 0;
+    margin: 0.5rem 0.5rem 0;
+    width: 9.5rem;
     font-size: 1.2rem;
+}
+
+.header-description-soon {
+    margin: 0.5rem 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.header-dot {
+    margin: 0.5rem 0.5rem 0;
+    height: 0.2rem;
+    width: 0.2rem;
+    border-radius: 1rem;
+    background-color: black;
 }
 
 .header-date {
