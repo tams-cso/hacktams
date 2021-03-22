@@ -7,5 +7,111 @@
     },
     "devpost": "https://hacktams2020f.devpost.com/?ref_feature=challenge&ref_medium=discover",
     "site": "https://2020.hacktams.org/",
-    "team": []
+    "team": [
+        {
+            "name": "Jeongwoo Choi",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Rohit Rajan",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Anusha Kakileti",
+            "position": "Outreach Lead",
+            "image": ""
+        },
+        {
+            "name": "Zhuoli Xie",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Sridhar Nandigam",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Pranav Hariharan",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Abhijay Achukola",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Kapil Yadav",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Timothy Haynes",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Andrew Zheng",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Anay Gupta",
+            "position": "Outreach",
+            "image": ""
+        },
+        {
+            "name": "Ben Wang",
+            "position": "Tech",
+            "image": ""
+        },
+        {
+            "name": "Daniel Ting",
+            "position": "Tech",
+            "image": ""
+        },
+        {
+            "name": "Dylan Li",
+            "position": "Tech",
+            "image": ""
+        },
+        {
+            "name": "Pranoy Dutta",
+            "position": "Sponsorship",
+            "image": ""
+        },
+        {
+            "name": "Kanav Bengani",
+            "position": "Sponsorship",
+            "image": ""
+        },
+        {
+            "name": "Brianna Chan",
+            "position": "Marketing",
+            "image": ""
+        },
+        {
+            "name": "Anthony Zhou",
+            "position": "Marketing",
+            "image": ""
+        },
+        {
+            "name": "Michael Zhou",
+            "position": "Design",
+            "image": ""
+        },
+        {
+            "name": "Tarun Kholay",
+            "position": "Design",
+            "image": ""
+        },
+        {
+            "name": "Harsha Kota",
+            "position": "Design",
+            "image": ""
+        }
+    ]
 }
