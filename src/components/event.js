@@ -15,7 +15,7 @@ class Event extends React.Component {
 
     createTeamComponents = (data) => {
         const teamlist = [];
-        data.sort((a, b) => (a.name < b.name ? -1 : 1));
+        // data.sort((a, b) => (a.name < b.name ? -1 : 1));
         data.forEach((person) => {
             teamlist.push(<Person key={person.name} info={person} />);
         });
@@ -26,7 +26,7 @@ class Event extends React.Component {
         if (info === null)
             return (
                 <div className="header-info">
-                    <p className="header-description-soon">Coming Soon</p>
+                    <p className="header-description-soon">Coming Soon! Check back in late Summer</p>
                 </div>
             );
         return (
