@@ -2,15 +2,15 @@
     "year": "2020",
     "dates": "November 6-8",
     "info": {
-        "participants": 0,
-        "projects": 0
+        "participants": 150,
+        "projects": 44
     },
     "devpost": "https://hacktams2020f.devpost.com/?ref_feature=challenge&ref_medium=discover",
     "site": "https://2020.hacktams.org/",
     "team": [
         {
             "name": "Jeongwoo Choi",
-            "position": "Logistics",
+            "position": "Director",
             "image": ""
         },
         {
@@ -20,7 +20,7 @@
         },
         {
             "name": "Anusha Kakileti",
-            "position": "Outreach Lead",
+            "position": "Outreach",
             "image": ""
         },
         {
@@ -65,7 +65,7 @@
         },
         {
             "name": "Ben Wang",
-            "position": "Tech",
+            "position": "Tech Lead",
             "image": ""
         },
         {
@@ -80,7 +80,7 @@
         },
         {
             "name": "Pranoy Dutta",
-            "position": "Sponsorship",
+            "position": "Sponsorship Lead",
             "image": ""
         },
         {
@@ -89,18 +89,18 @@
             "image": ""
         },
         {
+            "name": "Anthony Zhou",
+            "position": "Marketing Lead",
+            "image": ""
+        },
+        {
             "name": "Brianna Chan",
             "position": "Marketing",
             "image": ""
         },
         {
-            "name": "Anthony Zhou",
-            "position": "Marketing",
-            "image": ""
-        },
-        {
             "name": "Michael Zhou",
-            "position": "Design",
+            "position": "Design Lead",
             "image": ""
         },
         {

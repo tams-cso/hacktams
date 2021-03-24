@@ -1,23 +1,18 @@
 {
     "year": "2021",
-    "dates": "October 23",
+    "dates": "Fall",
     "info": null,
     "devpost": null,
     "site": "https://2021.hacktams.org/",
     "team": [
         {
+            "name": "Dylan Li",
+            "position": "Director/Dev Lead",
+            "image": ""
+        },
+        {
             "name": "Rohit Rajan",
             "position": "Logistics Lead",
-            "image": ""
-        },
-        {
-            "name": "Kapil Yadav",
-            "position": "Logistics",
-            "image": ""
-        },
-        {
-            "name": "Zhuoli Xie",
-            "position": "Logistics",
             "image": ""
         },
         {
@@ -36,12 +31,22 @@
             "image": ""
         },
         {
+            "name": "Kapil Yadav",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
+            "name": "Zhuoli Xie",
+            "position": "Logistics",
+            "image": ""
+        },
+        {
             "name": "Joanne Liu",
             "position": "Design Lead",
             "image": ""
         },
         {
-            "name": "Michael Zhao",
+            "name": "Lisa Li",
             "position": "Design",
             "image": ""
         },
@@ -56,22 +61,17 @@
             "image": ""
         },
         {
-            "name": "Dylan Li",
-            "position": "Dev Lead",
-            "image": ""
-        },
-        {
-            "name": "Anirudh Kaza",
-            "position": "Dev",
-            "image": ""
-        },
-        {
             "name": "Aaron Mathews",
             "position": "Dev",
             "image": ""
         },
         {
             "name": "Adheesh Kadiresan",
+            "position": "Dev",
+            "image": ""
+        },
+        {
+            "name": "Anirudh Kaza",
             "position": "Dev",
             "image": ""
         },
@@ -91,23 +91,13 @@
             "image": ""
         },
         {
-            "name": "Stephanie You",
+            "name": "Brianna Chan",
             "position": "Marketing Lead",
             "image": ""
         },
         {
-            "name": "Brianna Chan",
+            "name": "Stephanie You",
             "position": "Marketing",
-            "image": ""
-        },
-        {
-            "name": "Ben Wang",
-            "position": "Marketing",
-            "image": ""
-        },
-        {
-            "name": "Jeongwoo Choi",
-            "position": "Logistics",
             "image": ""
         }
     ]
