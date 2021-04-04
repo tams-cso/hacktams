@@ -19,7 +19,7 @@ class Footer extends React.Component {
                     Made with &hearts; in Denton, Texas!<br></br>
                     Contact us at <a href="mailto: team@hacktams.org">team@hacktams.org</a>
                     <br></br>
-                    Want to sponsor us? Email us at <a href="mailto: sponsor@hacktams.org">sponsor@hacktams.org</a>
+                    Want to sponsor us? Email us at <a href="mailto:sponsorship@hacktams.org">sponsorship@hacktams.org</a>
                 </p>
                 <div className="footer-links">
                     <img
