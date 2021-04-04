@@ -4,6 +4,7 @@
     margin: 0 15vw;
     padding-top: 5rem;
 
+    height: calc(100vh - 10rem);
     display: flex; /* Horizontally center content */
     justify-content: center;
 }
