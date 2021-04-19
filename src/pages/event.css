@@ -1,121 +1,198 @@
+.event {
+    margin-top: 4rem;
+}
+
+/* Event header section */
+
+/* Headers should be 200px x 800px */
 .event-header {
-    display: flex;
-    padding: 0.75rem 0.5rem;
-    border-radius: 0.75rem;
+    height: 200px;
+    margin: 0 auto;
 
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    border: 10px solid white;
+    border-radius: 30px;
 
+    text-align: center;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .event-header:hover {
-    background-color: #ddd;
-    transition: 0.3s;
+    box-shadow: 0 0 20px white;
 }
 
-.event-body {
+/* Event dropdown section */
+
+.event-dropdown {
+    max-height: 0;
+    transition: 0.5s cubic-bezier(0.15, 0.76, 0.45, 0.74);
+    overflow: hidden;
+}
+
+/* This will break if the container is greater than 150vh */
+/* Change this value to the tallest event container */
+.event-dropdown.active {
+    max-height: 150vh;
+    transition: 0.5s cubic-bezier(0.76, 0.15, 0.74, 0.45);
+}
+
+.event-dropdown-info {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--text-2);
+}
+
+/* Container for all the buttons + switch */
+.event-dropdown-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Switch between organizers and sponsors */
+
+.event-dropdown-switch-container {
+    height: 2.5rem;
+    margin-right: 4rem;
+    position: relative;
+    border-radius: 0.5rem;
+    background-color: var(--button-0);
+}
+
+/* Background thing that actually moves with switch */
+.event-dropdown-switch-back {
+    width: 5.5rem;
+    height: 2rem;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    z-index: 1;
+
+    border-radius: 0.5rem;
+    background-color: var(--button-1);
+    transition: 0.5s;
+}
+
+.event-dropdown-switch-back.right {
+    left: 6.25rem;
+}
+
+/* The clickable text in the switch */
+.event-dropdown-switch {
+    height: 100%;
+    width: 6rem;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+    border: none;
+    
+    font-size: 1rem;
+    background-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.event-dropdown-switch.left.left-active {
+    color: white;
+}
+
+.event-dropdown-switch.right.right-active {
+    color: white;
+}
+
+/* Buttons for devpost and website */
+
+.event-dropdown-link {
+    padding: 0.5rem;
+    margin-left: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--button-0);
+    color: var(--text-2);
+}
+
+.event-dropdown-link.hidden {
     display: none;
-    margin: 0.5rem;
-    border: 0.25rem solid black;
-    border-top: none;
 }
 
-.down {
+.event-dropdown-link:hover {
+    color: white;
+}
+
+/* General formats for both sections */
+
+.event-dropdown-section {
+    display: none;
+}
+
+.event-dropdown-section.organizers.left {
     display: block;
 }
 
-.header-line {
-    height: 0.2rem;
-    min-width: 50vw;
-    border-radius: 1rem;
-    background-color: black;
-
-    flex-grow: 1;
+.event-dropdown-section.sponsors.right {
+    display: block;
 }
 
-.header-line {
-    height: 0.2rem;
-    min-width: 25vw;
-    border-radius: 1rem;
-    background-color: black;
+/* Organizers section */
 
-    flex-grow: 1;
-}
-
-.header-info {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.header-description {
-    margin: 0.5rem 0.5rem 0;
-    width: 9.5rem;
-    font-size: 1.2rem;
-}
-
-.header-description-soon {
-    margin: 0.5rem 1.5rem 0;
-    font-size: 1.2rem;
-}
-
-.align-left {
-    text-align: left;
-}
-
-.align-right {
-    text-align: right;
-}
-
-.header-dot {
-    margin: 1.25rem 0.5rem 0;
-    height: 0.2rem;
-    width: 0.2rem;
-    border-radius: 1rem;
-    background-color: black;
-}
-
-.header-date {
-    display: flex;
-    padding: 0 1rem;
-
-    font-family: var(--title-font);
-
-    flex-direction: column;
-    align-items: center;
-}
-
-.header-year {
-    margin: 0;
-    width: fit-content;
-    font-size: 2rem;
-}
-
-.header-dates {
-    margin: 0;
-    width: fit-content;
-    font-size: 1.5rem;
-}
-
-/* .header-participants {
-
-}
-
-.header-projects {
-
-} */
-
-.body-links {
-    display: flex;
-    padding: 0.5rem;
-    justify-content: center;
-}
-
-.body-team-list {
+.event-organizers-list {
+    margin: 2rem 5%;
+    width: 90%;
     display: grid;
-    padding: 0.5rem;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 1rem;
+    text-align: center;
+}
+
+.organizer-group {
+    position: relative; /* Needed to make img placeholder work */
+}
+
+.organizer-group:hover .organizer-name {
+    font-size: 1.5rem;
+    color: var(--text-1)
+}
+
+.organizer-group.clickable {
+    cursor: pointer;
+}
+
+.organizer-img {
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+
+    object-fit: cover;
+    display: block;
+    border: 1px solid white;
+    color: transparent;
+}
+
+.organizer-img-placeholder {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -2rem;
+    top: 0.5rem;
+}
+
+.organizer-name {
+    margin: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.organizer-position {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Sponsors section */
+
+.event-sponsors {
+    margin-top: 1rem;
+    text-align: center;
 }
