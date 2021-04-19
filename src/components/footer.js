@@ -5,6 +5,7 @@ import FB from '../images/fb_icon.png';
 import Insta from '../images/instagram_icon.png';
 import Twitter from '../images/twitter_icon.svg';
 import YouTube from '../images/yt_icon_rgb.png';
+import LinkedIn from '../images/linkedin_icon.png';
 
 class Footer extends React.Component {
     openSite = (site) => {
@@ -45,6 +46,12 @@ class Footer extends React.Component {
                         alt="YouTube"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.youtube.com/channel/UCVe1eL6FUcxay8gQ_BtHOjA')}
+                    />
+                    <img
+                        src={LinkedIn}
+                        alt="LinkedIn"
+                        className="footer-item"
+                        onClick={this.openSite.bind(this, 'https://www.linkedin.com/company/hacktams/')}
                     />
                 </div>
             </div>
