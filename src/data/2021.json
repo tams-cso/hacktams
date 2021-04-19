@@ -1,0 +1,83 @@
+{
+    "year": "2021",
+    "dates": "Fall",
+    "site": "https://2021.hacktams.org/",
+    "team": [
+        {
+            "name": "Dylan Li",
+            "position": "Director/Dev Lead"
+        },
+        {
+            "name": "Rohit Rajan",
+            "position": "Logistics Lead"
+        },
+        {
+            "name": "Abhijay Achukola",
+            "position": "Logistics"
+        },
+        {
+            "name": "Andrew Zheng",
+            "position": "Logistics"
+        },
+        {
+            "name": "Kane Dong",
+            "position": "Logistics"
+        },
+        {
+            "name": "Kapil Yadav",
+            "position": "Logistics"
+        },
+        {
+            "name": "Zhuoli Xie",
+            "position": "Logistics"
+        },
+        {
+            "name": "Joanne Liu",
+            "position": "Design Lead"
+        },
+        {
+            "name": "Lisa Li",
+            "position": "Design"
+        },
+        {
+            "name": "Lauren Nicolas",
+            "position": "Outreach Lead"
+        },
+        {
+            "name": "Aurelia Wang",
+            "position": "Outreach"
+        },
+        {
+            "name": "Aaron Mathews",
+            "position": "Dev"
+        },
+        {
+            "name": "Adheesh Kadiresan",
+            "position": "Dev"
+        },
+        {
+            "name": "Anirudh Kaza",
+            "position": "Dev"
+        },
+        {
+            "name": "Kanav Bengani",
+            "position": "Sponsorship Lead"
+        },
+        {
+            "name": "Shweta Kumaran",
+            "position": "Sponsorship"
+        },
+        {
+            "name": "Satwik Chalasani",
+            "position": "Sponsorship"
+        },
+        {
+            "name": "Brianna Chan",
+            "position": "Marketing Lead"
+        },
+        {
+            "name": "Stephanie You",
+            "position": "Marketing"
+        }
+    ]
+}

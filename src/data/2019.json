@@ -1,0 +1,26 @@
+{
+    "year": "2019",
+    "dates": "November 16-17",
+    "participants": 16,
+    "projects": 7,
+    "devpost": "https://hacktams2019.devpost.com/",
+    "site": null,
+    "team": [
+        {
+            "name": "Ben Taylor",
+            "position": "Organizer"
+        },
+        {
+            "name": "Ben Sun",
+            "position": "Organizer"
+        },
+        {
+            "name": "Connie Wang",
+            "position": "Organizer"
+        },
+        {
+            "name": "Eric Zhang",
+            "position": "Organizer"
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "year": "2020",
+    "dates": "November 6-8",
+    "participants": 150,
+    "projects": 44,
+    "devpost": "https://hacktams2020f.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "site": "https://2020.hacktams.org/",
+    "team": [
+        {
+            "name": "Jeongwoo Choi",
+            "position": "Director"
+        },
+        {
+            "name": "Rohit Rajan",
+            "position": "Logistics"
+        },
+        {
+            "name": "Anusha Kakileti",
+            "position": "Outreach"
+        },
+        {
+            "name": "Zhuoli Xie",
+            "position": "Outreach"
+        },
+        {
+            "name": "Sridhar Nandigam",
+            "position": "Outreach"
+        },
+        {
+            "name": "Pranav Hariharan",
+            "position": "Outreach"
+        },
+        {
+            "name": "Abhijay Achukola",
+            "position": "Outreach"
+        },
+        {
+            "name": "Kapil Yadav",
+            "position": "Outreach"
+        },
+        {
+            "name": "Timothy Haynes",
+            "position": "Outreach"
+        },
+        {
+            "name": "Andrew Zheng",
+            "position": "Outreach"
+        },
+        {
+            "name": "Anay Gupta",
+            "position": "Outreach"
+        },
+        {
+            "name": "Ben Wang",
+            "position": "Tech Lead"
+        },
+        {
+            "name": "Daniel Ting",
+            "position": "Tech"
+        },
+        {
+            "name": "Dylan Li",
+            "position": "Tech"
+        },
+        {
+            "name": "Pranoy Dutta",
+            "position": "Sponsorship Lead"
+        },
+        {
+            "name": "Kanav Bengani",
+            "position": "Sponsorship"
+        },
+        {
+            "name": "Anthony Zhou",
+            "position": "Marketing Lead"
+        },
+        {
+            "name": "Brianna Chan",
+            "position": "Marketing"
+        },
+        {
+            "name": "Michael Zhao",
+            "position": "Design Lead",
+            "link": "https://michaelzhao.xyz"
+        },
+        {
+            "name": "Tarun Kholay",
+            "position": "Design"
+        },
+        {
+            "name": "Harsha Kota",
+            "position": "Design"
+        }
+    ]
+}

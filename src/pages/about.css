@@ -1,0 +1,12 @@
+/* About section */
+
+.about {
+    padding: 10rem 15vw;
+    background-color: var(--sea);
+}
+
+.about-info-box {
+    margin: 0;
+    font-size: 1.25rem;
+    text-align: center;
+}

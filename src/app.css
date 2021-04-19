@@ -3,96 +3,61 @@
 #root {
     --title-font: 'Patrick Hand', sans-serif;
     --main-font: 'Open Sans', sans-serif;
-}
-
-h1 {
-    text-align: center;
-    font-family: var(--title-font);
-    font-size: 4rem;
-    margin: 1rem 0;
+    --sky: #b2e1ff;
+    --sea: #97c3ff;
+    --button-0: #73caff;
+    --button-1: #44a7e4;
+    --text-0: #00a1e1;
+    --text-1: #016aff;
+    --text-2: #00578a;
+    --text-3: #3f0600;
+    --text-4: #925b0c;
 }
 
 .app {
     width: 100%;
-    min-height: 100%;
-    height: 100%;
+    padding: 0.01rem;
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 1rem;
 }
 
-/* Home view */
-
-.home {
-    padding-top: 4rem;
-    height: calc(100% - 4rem);
-
-    display: flex; /* Horizontally center content */
-    justify-content: center;
-}
-
-.home-center-container {
-    display: flex; /* Vertically center content */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.home-title {
-    margin: 0;
-    font-family: var(--title-font);
-    font-size: 10rem;
-}
-
-.home-email-input {
-    width: 25rem;
-    padding: 0.5rem;
-
-    border: 0.25rem solid black;
-    border-radius: 0.5rem;
-    font-family: var(--main-font);
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.home-submit {
-    width: 10rem;
-    margin: 1rem 0 10rem;
-    border: 0.25rem solid black;
-    border-radius: 0.5rem;
-
-    font-family: var(--title-font);
-    font-size: 1.5rem;
-    background-color: white;
-
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.home-submit:hover,
-.home-submit:focus {
-    background-color: #ddd;
-}
-
-/* About section */
-
-.about {
-    margin: 0 15vw 5rem;
-}
-
-.about-info-box {
-    margin: 0;
-    padding: 0.5rem;
-    font-size: 1.25rem;
+.waves {
+    display: block;
 }
 
 /* List of events */
 
 .events {
-    margin: 0 10rem;
+    padding: 5rem 5vw 2rem;
+    background-color: var(--sea);
 }
 
+.events .event:nth-child(2) {
+    margin-top: 1rem;
+}
 
+/* General formats */
 
+h1 {
+    padding: 1rem 0;
+    margin: 0;
 
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 4rem;
+}
+
+a {
+    color: var(--text-1);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--text-0);
+}
+
+.title {
+    color: var(--text-1);
+}
