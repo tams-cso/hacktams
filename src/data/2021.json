@@ -1,104 +1,83 @@
 {
     "year": "2021",
     "dates": "Fall",
-    "info": null,
-    "devpost": null,
     "site": "https://2021.hacktams.org/",
     "team": [
         {
             "name": "Dylan Li",
-            "position": "Director/Dev Lead",
-            "image": ""
+            "position": "Director/Dev Lead"
         },
         {
             "name": "Rohit Rajan",
-            "position": "Logistics Lead",
-            "image": ""
+            "position": "Logistics Lead"
         },
         {
             "name": "Abhijay Achukola",
-            "position": "Logistics",
-            "image": ""
+            "position": "Logistics"
         },
         {
             "name": "Andrew Zheng",
-            "position": "Logistics",
-            "image": ""
+            "position": "Logistics"
         },
         {
             "name": "Kane Dong",
-            "position": "Logistics",
-            "image": ""
+            "position": "Logistics"
         },
         {
             "name": "Kapil Yadav",
-            "position": "Logistics",
-            "image": ""
+            "position": "Logistics"
         },
         {
             "name": "Zhuoli Xie",
-            "position": "Logistics",
-            "image": ""
+            "position": "Logistics"
         },
         {
             "name": "Joanne Liu",
-            "position": "Design Lead",
-            "image": ""
+            "position": "Design Lead"
         },
         {
             "name": "Lisa Li",
-            "position": "Design",
-            "image": ""
+            "position": "Design"
         },
         {
             "name": "Lauren Nicolas",
-            "position": "Outreach Lead",
-            "image": ""
+            "position": "Outreach Lead"
         },
         {
             "name": "Aurelia Wang",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Aaron Mathews",
-            "position": "Dev",
-            "image": ""
+            "position": "Dev"
         },
         {
             "name": "Adheesh Kadiresan",
-            "position": "Dev",
-            "image": ""
+            "position": "Dev"
         },
         {
             "name": "Anirudh Kaza",
-            "position": "Dev",
-            "image": ""
+            "position": "Dev"
         },
         {
             "name": "Kanav Bengani",
-            "position": "Sponsorship Lead",
-            "image": ""
+            "position": "Sponsorship Lead"
         },
         {
             "name": "Shweta Kumaran",
-            "position": "Sponsorship",
-            "image": ""
+            "position": "Sponsorship"
         },
         {
             "name": "Satwik Chalasani",
-            "position": "Sponsorship",
-            "image": ""
+            "position": "Sponsorship"
         },
         {
             "name": "Brianna Chan",
-            "position": "Marketing Lead",
-            "image": ""
+            "position": "Marketing Lead"
         },
         {
             "name": "Stephanie You",
-            "position": "Marketing",
-            "image": ""
+            "position": "Marketing"
         }
     ]
 }
