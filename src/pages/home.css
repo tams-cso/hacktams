@@ -1,18 +1,15 @@
 /* Home view */
 
 .home {
-    height: calc(100vh - 10rem);
-    padding: 5rem 15vw 0;
-
+    height: calc(80vh - 4rem);
     display: flex; /* Horizontally center content */
     justify-content: center;
-    background-color: #b0e2ff;
+    background-color: var(--sky);
 }
 
 .home-center-container {
     display: flex; /* Vertically center content */
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -21,34 +18,44 @@
     margin: 0;
     font-family: var(--title-font);
     font-size: 10rem;
+    color: var(--text-0);
 }
 
 .home-email-input {
-    width: 25rem;
+    width: 23rem;
     padding: 0.5rem;
 
-    border: 0.25rem solid black;
-    border-radius: 0.5rem;
     font-family: var(--main-font);
     font-size: 1.5rem;
     font-weight: 500;
+
+    border: none;
+    background-color: transparent;
+}
+
+.home-email-line {
+    width: 24rem;
+    display: block;
 }
 
 .home-submit {
-    width: 10rem;
-    margin: 1rem;
-    border: 0.25rem solid black;
-    border-radius: 0.5rem;
+    width: 22rem;
+    height: 7rem;
+    margin-top: -0.1rem;
+    border: none;
 
+    display: block;
     font-family: var(--title-font);
     font-size: 1.5rem;
-    background-color: white;
+    background-image: url('../images/graphics/sign-board.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: var(--text-3);
 
     cursor: pointer;
     transition: 0.3s;
 }
 
-.home-submit:hover,
-.home-submit:focus {
-    background-color: #ddd;
+.home-submit:hover {
+    color: white;
 }

@@ -5,6 +5,8 @@ import Home from './pages/home';
 import Footer from './pages/footer';
 import Event from './pages/event';
 
+import { ReactComponent as Waves } from './images/graphics/waves.svg';
+
 import './app.css';
 
 class App extends React.Component {
@@ -24,6 +26,7 @@ class App extends React.Component {
             <div className="app">
                 <Menu navigate={this.navigate} />
                 <Home reference={this.home} />
+                <Waves className="waves"></Waves>
                 <About reference={this.about} />
                 <div className="events" ref={this.events}>
                     <h1 className="events-title" id="events">Events</h1>

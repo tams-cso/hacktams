@@ -5,6 +5,11 @@
     --main-font: 'Open Sans', sans-serif;
     --sky: #b2e1ff;
     --sea: #97c3ff;
+    --text-0: #00a1e1;
+    --text-1: #016aff;
+    --text-2: #00578a;
+    --text-3: #3f0600;
+    --text-4: #925b0c;
 }
 
 h1 {
@@ -20,6 +25,10 @@ h1 {
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 1rem;
+}
+
+.waves {
+    display: block;
 }
 
 /* List of events */
