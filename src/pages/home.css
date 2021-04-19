@@ -1,12 +1,12 @@
 /* Home view */
 
 .home {
-    margin: 0 15vw;
-    padding-top: 5rem;
-
     height: calc(100vh - 10rem);
+    padding: 5rem 15vw 0;
+
     display: flex; /* Horizontally center content */
     justify-content: center;
+    background-color: #b0e2ff;
 }
 
 .home-center-container {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './event.css';
-import LinkBox from './link-box';
-import Person from './person';
+import LinkBox from '../components/link-box';
+import Person from '../components/person';
 
 class Event extends React.Component {
     constructor(props) {

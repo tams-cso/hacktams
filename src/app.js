@@ -1,9 +1,9 @@
 import React from 'react';
-import Menu from './components/menu';
-import About from './components/about';
-import Home from './components/home';
-import Footer from './components/footer';
-import Event from './components/event';
+import Menu from './pages/menu';
+import About from './pages/about';
+import Home from './pages/home';
+import Footer from './pages/footer';
+import Event from './pages/event';
 
 import './app.css';
 
@@ -26,7 +26,7 @@ class App extends React.Component {
                 <Home reference={this.home} />
                 <About reference={this.about} />
                 <div className="events" ref={this.events}>
-                    <h1 className="events-title">Events</h1>
+                    <h1 id="Events" className="events-title">Events</h1>
                     <Event year="2021" />
                     <Event year="2020" />
                     <Event year="2019" />

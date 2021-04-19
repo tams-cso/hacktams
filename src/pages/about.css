@@ -1,8 +1,8 @@
 /* About section */
 
 .about {
-    margin: 0 15vw;
-    padding-top: 5rem;
+    padding: 5rem 15vw;
+    background-color: #e4daff;
 }
 
 .about-info-box {
