@@ -3,6 +3,13 @@
 #root {
     --title-font: 'Patrick Hand', sans-serif;
     --main-font: 'Open Sans', sans-serif;
+    --sky: #b2e1ff;
+    --sea: #97c3ff;
+    --text-0: #00a1e1;
+    --text-1: #016aff;
+    --text-2: #00578a;
+    --text-3: #3f0600;
+    --text-4: #925b0c;
 }
 
 h1 {
@@ -20,9 +27,13 @@ h1 {
     font-size: 1rem;
 }
 
+.waves {
+    display: block;
+}
+
 /* List of events */
 
 .events {
-    margin: 0 15vw;
-    padding-top: 5rem;
+    padding: 5rem 15vw 0;
+    background-color: var(--sea);
 }
