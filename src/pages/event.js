@@ -1,65 +1,90 @@
 import React from 'react';
 import './event.css';
-import LinkBox from '../components/link-box';
-import Person from '../components/person';
+import { ReactComponent as Duck } from '../images/graphics/white-duck.svg';
+
+// TODO: Replace this with the actual hackTAMS database
+const imageDb = 'https://api.michaelzhao.xyz/static/hacktams';
 
 class Event extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { dropdown: false };
+        this.state = { dropdown: false, toggle: 'left' };
     }
 
-    changeDropdown = () => {
+    toggleDropdown = () => {
         this.setState({ dropdown: !this.state.dropdown });
     };
 
-    createTeamComponents = (data) => {
-        const teamlist = [];
-        // data.sort((a, b) => (a.name < b.name ? -1 : 1));
-        data.forEach((person) => {
-            teamlist.push(<Person key={person.name} info={person} />);
-        });
-        return teamlist;
+    changeSwitch = (dir) => {
+        this.setState({ toggle: dir });
     };
 
-    createInfo = (info) => {
-        if (info === null)
-            return (
-                <div className="header-info">
-                    <p className="header-description-soon">Coming Soon! Check back in late Summer</p>
-                </div>
-            );
-        return (
-            <div className="header-info">
-                <p className="header-description align-right">{`${info.participants} participants`}</p>
-                <div className="header-dot"></div>
-                <p className="header-description align-left">{`${info.projects} projects`}</p>
+    formatInfo = (data) => {
+        let numbers = ` • ${data.participants} participants • ${data.projects} projects`;
+        if (data.participants === undefined || data.projects === undefined) {
+            numbers = ` • Hackathon coming soon!`;
+        }
+        return `${data.dates}${numbers}`;
+    };
+
+    createOrganizersList = (team) => {
+        return team.map((t, i) => (
+            <div className="organizer-group" key={`${i}-${t.name}`}>
+                <img className="organizer-img" src="" alt={t.name}></img>
+                <Duck className="organizer-img-placeholder"></Duck>
+                <p className="organizer-name">{t.name}</p>
+                <p className="organizer-position">{t.position}</p>
             </div>
-        );
+        ));
     };
 
     render() {
         const data = require(`../data/${this.props.year}.json`);
-        const info = this.createInfo(data.info);
-        const teamComponents = this.createTeamComponents(data.team);
+        const info = this.formatInfo(data);
+        const organizersList = this.createOrganizersList(data.team);
+
+        const hasDevpost = data.devpost ? '' : 'hidden';
+        const hasWebsite = data.site ? '' : 'hidden';
 
         return (
             <div className="event">
-                <div className="event-header" onClick={this.changeDropdown}>
-                    <div className="header-line"></div>
-                    <div className="header-date">
-                        <p className="header-year">{data.year}</p>
-                        <p className="header-dates">{data.dates}</p>
+                <img
+                    className="event-header"
+                    alt={`${this.props.year} header`}
+                    src={`${imageDb}/${this.props.year}.png`}
+                    onClick={this.toggleDropdown}
+                ></img>
+                <div className={`event-dropdown ${this.state.dropdown ? 'active' : ''}`}>
+                    <p className="event-dropdown-info">{info}</p>
+                    <div className="event-dropdown-button-container">
+                        <div className="event-dropdown-switch-container">
+                            <div className={`event-dropdown-switch-back ${this.state.toggle}`}></div>
+                            <button
+                                className={`event-dropdown-switch left ${this.state.toggle}-active`}
+                                onClick={this.changeSwitch.bind(this, 'left')}
+                            >
+                                Organizers
+                            </button>
+                            <button
+                                className={`event-dropdown-switch right ${this.state.toggle}-active`}
+                                onClick={this.changeSwitch.bind(this, 'right')}
+                            >
+                                Sponsors
+                            </button>
+                        </div>
+                        <a className={`event-dropdown-link devpost ${hasDevpost}`} href={data.devpost}>
+                            Devpost
+                        </a>
+                        <a className={`event-dropdown-link website ${hasWebsite}`} href={data.site}>
+                            Website
+                        </a>
                     </div>
-                    <div className="header-line"></div>
-                    {info}
-                </div>
-                <div className={`event-body ${this.state.dropdown ? 'down' : ''}`}>
-                    <div className="body-links">
-                        <LinkBox link={data.devpost}>Devpost</LinkBox>
-                        <LinkBox link={data.site}>Site</LinkBox>
+                    <div className={`event-dropdown-section organizers ${this.state.toggle}`}>
+                        <div className="event-organizers-list">{organizersList}</div>
                     </div>
-                    <div className="body-team-list">{teamComponents}</div>
+                    <div className={`event-dropdown-section sponsors ${this.state.toggle}`}>
+                        <div className="event-sponsors">Sponsors WIP</div>
+                    </div>
                 </div>
             </div>
         );
