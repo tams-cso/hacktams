@@ -154,6 +154,10 @@
     color: var(--text-1)
 }
 
+.organizer-group.clickable {
+    cursor: pointer;
+}
+
 .organizer-img {
     width: 5rem;
     height: 5rem;

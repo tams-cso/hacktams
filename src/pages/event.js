@@ -19,6 +19,11 @@ class Event extends React.Component {
         this.setState({ toggle: dir });
     };
 
+    openLink = (link) => {
+        if (link === undefined) return;
+        window.open(link, '_blank');
+    };
+
     formatInfo = (data) => {
         let numbers = ` • ${data.participants} participants • ${data.projects} projects`;
         if (data.participants === undefined || data.projects === undefined) {
@@ -29,7 +34,11 @@ class Event extends React.Component {
 
     createOrganizersList = (team) => {
         return team.map((t, i) => (
-            <div className="organizer-group" key={`${i}-${t.name}`}>
+            <div
+                className={`organizer-group ${t.link ? 'clickable' : ''}`}
+                key={`${i}-${t.name}`}
+                onClick={this.openLink.bind(this, t.link)}
+            >
                 <img className="organizer-img" src="" alt={t.name}></img>
                 <Duck className="organizer-img-placeholder"></Duck>
                 <p className="organizer-name">{t.name}</p>
