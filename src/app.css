@@ -34,6 +34,6 @@ h1 {
 /* List of events */
 
 .events {
-    margin: 0 15vw;
-    padding-top: 5rem;
+    padding: 5rem 15vw 0;
+    background-color: var(--sea);
 }
