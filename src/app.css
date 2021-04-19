@@ -3,6 +3,8 @@
 #root {
     --title-font: 'Patrick Hand', sans-serif;
     --main-font: 'Open Sans', sans-serif;
+    --sky: #b2e1ff;
+    --sea: #97c3ff;
 }
 
 h1 {

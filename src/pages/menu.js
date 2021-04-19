@@ -1,27 +1,31 @@
 import React from 'react';
+import { ReactComponent as Duck } from '../images/logos/duck-logo.svg';
 import './menu.css';
 
-import { ReactComponent as Duck } from '../images/logos/duck-logo.svg';
-
 class Menu extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { spin: false };
+    }
+
+    toggleSpin = () => {
+        this.setState({ spin: !this.state.spin });
+    };
+    
     render() {
+        const spinDuck = this.state.spin ? 'spin' : '';
         return (
-            <div className="navbar">
-                <div className="navbar-item navbar-logo-container" onClick={this.props.navigate.bind(this, 'home')}>
-                    <Duck className="navbar-logo"></Duck>
-                </div>
-                <button className="navbar-item" onClick={this.props.navigate.bind(this, 'home')}>
-                    Home
-                </button>
-                <button className="navbar-item" onClick={this.props.navigate.bind(this, 'about')}>
+            <div className="menu">
+                <Duck className={`menu-item menu-logo ${spinDuck}`} onClick={this.toggleSpin}></Duck>
+                <a className="menu-item" href={`${window.location.origin}#about`}>
                     About Us
-                </button>
-                <button className="navbar-item" onClick={this.props.navigate.bind(this, 'events')}>
+                </a>
+                <a className="menu-item" href={`${window.location.origin}#events`}>
                     Our Events
-                </button>
-                <button className="navbar-item" onClick={this.props.navigate.bind(this, 'contact')}>
+                </a>
+                <a className="menu-item" href={`${window.location.origin}#contact-us`}>
                     Contact Us
-                </button>
+                </a>
             </div>
         );
     }
