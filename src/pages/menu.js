@@ -1,7 +1,7 @@
 import React from 'react';
 import './menu.css';
 
-import { ReactComponent as Duck } from '../images/duck-logo.svg';
+import { ReactComponent as Duck } from '../images/logos/duck-logo.svg';
 
 class Menu extends React.Component {
     render() {

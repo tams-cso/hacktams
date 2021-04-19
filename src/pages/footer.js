@@ -1,8 +1,8 @@
 import React from 'react';
-import { ReactComponent as FB } from '../images/fb-icon.svg';
-import { ReactComponent as Instagram } from '../images/instagram-icon.svg';
-import { ReactComponent as Twitter } from '../images/twitter-icon.svg';
-import { ReactComponent as Youtube } from '../images/yt-icon.svg';
+import { ReactComponent as FB } from '../images/logos/fb-icon.svg';
+import { ReactComponent as Instagram } from '../images/logos/instagram-icon.svg';
+import { ReactComponent as Twitter } from '../images/logos/twitter-icon.svg';
+import { ReactComponent as Youtube } from '../images/logos/yt-icon.svg';
 import './footer.css';
 
 class Footer extends React.Component {
