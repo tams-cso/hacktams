@@ -40,6 +40,16 @@ h1 {
     margin: 1rem 0;
 }
 
+a {
+    color: var(--text-1);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--text-0);
+}
+
 .title {
     color: var(--text-1);
 }
