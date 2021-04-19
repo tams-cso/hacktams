@@ -1,117 +1,95 @@
 {
     "year": "2020",
     "dates": "November 6-8",
-    "info": {
-        "participants": 150,
-        "projects": 44
-    },
+    "participants": 150,
+    "projects": 44,
     "devpost": "https://hacktams2020f.devpost.com/?ref_feature=challenge&ref_medium=discover",
     "site": "https://2020.hacktams.org/",
     "team": [
         {
             "name": "Jeongwoo Choi",
-            "position": "Director",
-            "image": ""
+            "position": "Director"
         },
         {
             "name": "Rohit Rajan",
-            "position": "Logistics",
-            "image": ""
+            "position": "Logistics"
         },
         {
             "name": "Anusha Kakileti",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Zhuoli Xie",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Sridhar Nandigam",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Pranav Hariharan",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Abhijay Achukola",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Kapil Yadav",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Timothy Haynes",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Andrew Zheng",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Anay Gupta",
-            "position": "Outreach",
-            "image": ""
+            "position": "Outreach"
         },
         {
             "name": "Ben Wang",
-            "position": "Tech Lead",
-            "image": ""
+            "position": "Tech Lead"
         },
         {
             "name": "Daniel Ting",
-            "position": "Tech",
-            "image": ""
+            "position": "Tech"
         },
         {
             "name": "Dylan Li",
-            "position": "Tech",
-            "image": ""
+            "position": "Tech"
         },
         {
             "name": "Pranoy Dutta",
-            "position": "Sponsorship Lead",
-            "image": ""
+            "position": "Sponsorship Lead"
         },
         {
             "name": "Kanav Bengani",
-            "position": "Sponsorship",
-            "image": ""
+            "position": "Sponsorship"
         },
         {
             "name": "Anthony Zhou",
-            "position": "Marketing Lead",
-            "image": ""
+            "position": "Marketing Lead"
         },
         {
             "name": "Brianna Chan",
-            "position": "Marketing",
-            "image": ""
+            "position": "Marketing"
         },
         {
             "name": "Michael Zhou",
             "position": "Design Lead",
-            "image": ""
+            "link": "https://michaelzhao.xyz"
         },
         {
             "name": "Tarun Kholay",
-            "position": "Design",
-            "image": ""
+            "position": "Design"
         },
         {
             "name": "Harsha Kota",
-            "position": "Design",
-            "image": ""
+            "position": "Design"
         }
     ]
 }
