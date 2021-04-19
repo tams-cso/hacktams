@@ -1,10 +1,9 @@
 import React from 'react';
+import { ReactComponent as FB } from '../images/fb-icon.svg';
+import { ReactComponent as Instagram } from '../images/instagram-icon.svg';
+import { ReactComponent as Twitter } from '../images/twitter-icon.svg';
+import { ReactComponent as Youtube } from '../images/yt-icon.svg';
 import './footer.css';
-
-import FB from '../images/fb_icon.png';
-import Insta from '../images/instagram_icon.png';
-import Twitter from '../images/twitter_icon.svg';
-import YouTube from '../images/yt_icon_rgb.png';
 
 class Footer extends React.Component {
     openSite = (site) => {
@@ -22,26 +21,22 @@ class Footer extends React.Component {
                     Want to sponsor us? Email us at <a href="mailto:sponsorship@hacktams.org">sponsorship@hacktams.org</a>
                 </p>
                 <div className="footer-links">
-                    <img
-                        src={FB}
+                    <FB
                         alt="Facebook"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.facebook.com/hackTAMS')}
                     />
-                    <img
-                        src={Insta}
+                    <Instagram
                         alt="Instagram"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.instagram.com/hacktams/?hl=en')}
                     />
-                    <img
-                        src={Twitter}
+                    <Twitter
                         alt="Twitter"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://twitter.com/thehackTAMS')}
                     />
-                    <img
-                        src={YouTube}
+                    <Youtube
                         alt="YouTube"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.youtube.com/channel/UCVe1eL6FUcxay8gQ_BtHOjA')}
