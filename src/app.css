@@ -12,13 +12,6 @@
     --text-4: #925b0c;
 }
 
-h1 {
-    text-align: center;
-    font-family: var(--title-font);
-    font-size: 4rem;
-    margin: 1rem 0;
-}
-
 .app {
     width: 100%;
     padding: 0.01rem;
@@ -36,4 +29,17 @@ h1 {
 .events {
     padding: 5rem 15vw 0;
     background-color: var(--sea);
+}
+
+/* General formats */
+
+h1 {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.title {
+    color: var(--text-1);
 }
