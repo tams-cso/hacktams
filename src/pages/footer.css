@@ -1,8 +1,8 @@
 /*Footer stuff*/
 .footer {
-    margin: 0 15vw 1rem;
-    padding-top: 5rem;
+    padding: 5rem 15vw 1rem;
     text-align: center;
+    background-color: var(--sea);
 }
 
 .footer-info {

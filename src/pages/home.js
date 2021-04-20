@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactComponent as EmailLine } from '../images/graphics/email-line.svg';
 import './home.css';
 
 class Home extends React.Component {
@@ -23,10 +24,11 @@ class Home extends React.Component {
                     <h1 className="home-title">hackTAMS</h1>
                     <input
                         className="home-email-input"
-                        placeholder="Email"
+                        placeholder="Enter your email..."
                         value={this.state.email}
                         onChange={this.handleEmailChange}
                     ></input>
+                    <EmailLine className="home-email-line"></EmailLine>
                     <button className="home-submit" onClick={this.submit}>
                         Sign up for our newsletter!
                     </button>

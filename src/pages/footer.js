@@ -1,10 +1,10 @@
 import React from 'react';
+import { ReactComponent as FB } from '../images/logos/fb-icon.svg';
+import { ReactComponent as Instagram } from '../images/logos/instagram-icon.svg';
+import { ReactComponent as Twitter } from '../images/logos/twitter-icon.svg';
+import { ReactComponent as Youtube } from '../images/logos/yt-icon.svg';
+import { ReactComponent as LinkedIn } from '../images/logos/linkedin-icon.svg';
 import './footer.css';
-
-import FB from '../images/fb_icon.png';
-import Insta from '../images/instagram_icon.png';
-import Twitter from '../images/twitter_icon.svg';
-import YouTube from '../images/yt_icon_rgb.png';
 
 class Footer extends React.Component {
     openSite = (site) => {
@@ -14,37 +14,41 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="footer" ref={this.props.reference}>
-                <h1 className="footer-title">Contact Us!</h1>
+                <h1 className="title footer-title" id="contact-us">
+                    Contact Us!
+                </h1>
                 <p className="footer-info">
-                    Made with &hearts; in Denton, Texas!<br></br>
+                    Made with 💖 in Denton, Texas!<br></br>
                     Contact us at <a href="mailto: team@hacktams.org">team@hacktams.org</a>
                     <br></br>
-                    Want to sponsor us? Email us at <a href="mailto:sponsorship@hacktams.org">sponsorship@hacktams.org</a>
+                    Want to sponsor us? Email us at&nbsp;
+                    <a href="mailto:sponsorship@hacktams.org">sponsorship@hacktams.org</a>
                 </p>
                 <div className="footer-links">
-                    <img
-                        src={FB}
+                    <FB
                         alt="Facebook"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.facebook.com/hackTAMS')}
                     />
-                    <img
-                        src={Insta}
+                    <Instagram
                         alt="Instagram"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.instagram.com/hacktams/?hl=en')}
                     />
-                    <img
-                        src={Twitter}
+                    <Twitter
                         alt="Twitter"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://twitter.com/thehackTAMS')}
                     />
-                    <img
-                        src={YouTube}
+                    <Youtube
                         alt="YouTube"
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.youtube.com/channel/UCVe1eL6FUcxay8gQ_BtHOjA')}
+                    />
+                    <LinkedIn
+                        alt="LinkedIn"
+                        className="footer-item"
+                        onClick={this.openSite.bind(this, 'https://www.linkedin.com/company/hacktams/')}
                     />
                 </div>
             </div>
