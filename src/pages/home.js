@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as EmailLine } from '../images/graphics/email-line.svg';
+import { ReactComponent as SignBoard } from '../images/graphics/sign-board.svg';
 import './home.css';
 
 class Home extends React.Component {
@@ -28,10 +28,12 @@ class Home extends React.Component {
                         value={this.state.email}
                         onChange={this.handleEmailChange}
                     ></input>
-                    <EmailLine className="home-email-line"></EmailLine>
-                    <button className="home-submit" onClick={this.submit}>
-                        Sign up for our newsletter!
-                    </button>
+                    <div className="home-button-img-group">
+                        <SignBoard className="home-email-line"></SignBoard>
+                        <button className="home-submit" onClick={this.submit}>
+                            Sign up for our newsletter!
+                        </button>
+                    </div>
                 </div>
             </div>
         );
