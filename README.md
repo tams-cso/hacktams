@@ -8,6 +8,33 @@ This is the official site for hackTAMS! Feel free to look around and make a pull
 
 To install, clone the repository and run `yarn install`.
 
+### Configuration
+
+All the data is in the `data` folder, sorted by years. Each data file will contain the following information:
+
+```json
+{
+    "year": "YYYY",
+    "dates": "Month [Start Date]-[End Date]",
+    "participants": 2147483647,
+    "projects": 42,
+    "devpost": "Link to devpost",
+    "site": "Link to website",
+    "team": [
+        {
+            "name": "Name of team member to display",
+            "position": "Position of team member to display",
+            "link": "(optional) Link to site/github/linkedin/etc to go to when clicked on",
+            "img": "(optional) Name of image in image folder"
+        },
+        {
+            // team memeber 2
+        }
+        // etc
+    ]
+}
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
