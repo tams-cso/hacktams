@@ -39,7 +39,7 @@ class Event extends React.Component {
                 key={`${i}-${t.name}`}
                 onClick={this.openLink.bind(this, t.link)}
             >
-                <img className="organizer-img" src="" alt={t.name}></img>
+                <img className="organizer-img" src={t.img ? `${imageDb}/${t.img}` : ''} alt={t.name}></img>
                 <Duck className="organizer-img-placeholder"></Duck>
                 <p className="organizer-name">{t.name}</p>
                 <p className="organizer-position">{t.position}</p>

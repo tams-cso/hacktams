@@ -149,11 +149,6 @@
     position: relative; /* Needed to make img placeholder work */
 }
 
-.organizer-group:hover .organizer-name {
-    font-size: 1.5rem;
-    color: var(--text-1)
-}
-
 .organizer-group.clickable {
     cursor: pointer;
 }
@@ -162,27 +157,41 @@
     width: 5rem;
     height: 5rem;
     margin: auto;
+    position: relative;
+    z-index: 1;
 
     object-fit: cover;
     display: block;
     border: 1px solid white;
     color: transparent;
+    transition: 0.3s;
 }
 
 .organizer-img-placeholder {
     width: 4rem;
     height: 4rem;
     position: absolute;
+
     left: 50%;
     margin-left: -2rem;
     top: 0.5rem;
+
+    transition: 0.3s;
+}
+
+.organizer-group:hover .organizer-img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.organizer-group:hover .organizer-img-placeholder {
+    top: 1rem;
 }
 
 .organizer-name {
     margin: 0.25rem;
     font-size: 1.25rem;
     font-weight: 700;
-    transition: 0.3s;
 }
 
 .organizer-position {
