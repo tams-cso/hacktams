@@ -1,0 +1,14 @@
+p {
+    text-align: center;
+}
+
+.speakers {
+    margin: 0 15vw;
+    color: white;
+}
+
+.speakers-menu {
+    display: flex;
+    flex-direction: column;
+
+}

@@ -1,39 +1,32 @@
 import React from 'react';
-import Menu from './pages/menu';
-import About from './pages/about';
 import Home from './pages/home';
+import About from './pages/about';
+import FAQ from './pages/faq';
+import Sponsors from './pages/sponsors';
 import Footer from './pages/footer';
-import Event from './pages/event';
-
-import { ReactComponent as Waves } from './images/graphics/waves.svg';
-
 import './app.css';
+
+import { ReactComponent as Duck } from './images/logo-2021.svg';
+import Speakers from './components/speakers';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-
         this.home = React.createRef();
         this.about = React.createRef();
-        this.events = React.createRef();
-        this.contact = React.createRef();
+        this.faq = React.createRef();
+        this.sponsors = React.createRef();
+        this.footer = React.createRef();
     }
-
-    navigate = (location) => this[location].current.scrollIntoView({ behavior: 'smooth' });
-
     render() {
         return (
             <div className="app">
-                <Menu navigate={this.navigate} />
+                <Duck className="logo"></Duck>
                 <Home reference={this.home} />
-                <Waves className="waves"></Waves>
                 <About reference={this.about} />
-                <div className="events" ref={this.events}>
-                    <h1 className="title events-title" id="events">Events</h1>
-                    <Event year="2021" />
-                    <Event year="2020" />
-                    <Event year="2019" />
-                </div>
+                <Speakers />
+                <FAQ reference={this.faq} />
+                <Sponsors reference={this.sponsors} />
                 <Footer reference={this.contact} />
             </div>
         );

@@ -3,61 +3,60 @@
 #root {
     --title-font: 'Patrick Hand', sans-serif;
     --main-font: 'Open Sans', sans-serif;
-    --sky: #b2e1ff;
-    --sea: #97c3ff;
-    --button-0: #73caff;
-    --button-1: #44a7e4;
-    --text-0: #00a1e1;
-    --text-1: #016aff;
-    --text-2: #00578a;
-    --text-3: #3f0600;
-    --text-4: #925b0c;
-}
-
-.app {
-    width: 100%;
-    padding: 0.01rem;
-    font-family: var(--main-font);
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.waves {
-    display: block;
-}
-
-/* List of events */
-
-.events {
-    padding: 5rem 5vw 2rem;
-    background-color: var(--sea);
-}
-
-.events .event:nth-child(2) {
-    margin-top: 1rem;
-}
-
-/* General formats */
-
-h1 {
-    padding: 1rem 0;
-    margin: 0;
-
-    text-align: center;
-    font-family: var(--title-font);
-    font-size: 4rem;
+    --text-primary: #ffffff;
 }
 
 a {
-    color: var(--text-1);
     text-decoration: none;
-    transition: 0.2s;
+    color: rgb(68, 199, 186);
+    transition: 0.3s;
 }
 
 a:hover {
-    color: var(--text-0);
+    color: rgb(75, 227, 212);
 }
 
-.title {
-    color: var(--text-1);
+h1 {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 3.5rem;
+    margin: 1rem 0;
+    color: white; 
+}
+
+h3 {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: white; 
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 0.01rem;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #222;
+}
+
+.logo {
+    height: 5rem;
+    padding: 0.1rem;
+}
+
+.more {
+    height: 50vw;
+    margin-bottom: 50px;
 }

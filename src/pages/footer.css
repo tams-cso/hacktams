@@ -1,17 +1,27 @@
 /*Footer stuff*/
+
 .footer {
     padding: 5rem 15vw 1rem;
+    padding-top: 5rem;
     text-align: center;
-    background-color: var(--sea);
+}
+
+.footer-title {
+    width: 50%;
+    float: left;
+    padding-bottom: 2rem;
+    margin: 0 5vw;
 }
 
 .footer-info {
+    float: left;
     margin: 0 10vw;
-    padding: 0.5rem 0;
     font-size: 1rem;
+    color: white;
 }
 
 .footer-links {
+    float: left;
     display: flex;
     justify-content: space-evenly;
 }
@@ -19,6 +29,7 @@
 .footer-item {
     height: 40px;
     width: 40px;
+    margin-right: 4rem;
     cursor: pointer;
 }
 
