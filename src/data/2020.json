@@ -8,7 +8,8 @@
     "team": [
         {
             "name": "Jeongwoo Choi",
-            "position": "Director"
+            "position": "Director",
+            "link": "https://github.com/jeongwoo55"
         },
         {
             "name": "Rohit Rajan",
@@ -52,7 +53,8 @@
         },
         {
             "name": "Ben Wang",
-            "position": "Tech Lead"
+            "position": "Tech Lead",
+            "link": "http://wbne.github.io/"
         },
         {
             "name": "Daniel Ting",
