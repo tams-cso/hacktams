@@ -1,14 +1,30 @@
 import React from 'react';
 import './event.css';
 import { ReactComponent as Duck } from '../images/graphics/white-duck.svg';
+import Chart from 'chart.js/auto';
 
 // TODO: Replace this with the actual hackTAMS database
 const imageDb = 'https://api.michaelzhao.xyz/static/hacktams';
 
+// Color preview: https://coolors.co/e76f51-f4a261-e9c46a-2a9d8f-3b429f-2b2d42-5d737e-095256-634b66
+const possibleColors = [
+    '#e76f51',
+    '#f4a261',
+    '#e9c46a',
+    '#2a9d8f',
+    '#3b429f',
+    '#2b2d42',
+    '#5d737e',
+    '#095256',
+    '#634b66',
+];
+
 class Event extends React.Component {
     constructor(props) {
         super(props);
+        this.data = require(`../data/${this.props.year}.json`);
         this.state = { dropdown: false, toggle: 'left' };
+        this.chart = React.createRef();
     }
 
     toggleDropdown = () => {
@@ -43,7 +59,7 @@ class Event extends React.Component {
                 {/* This will BREAK if 2 people share the same name!!! */}
                 <img
                     className="organizer-img"
-                    src={`${imageDb}/${t.name.replace(' ', '-').toLowerCase()}.jpg`}
+                    src={`${imageDb}/people/${t.name.replace(' ', '-').toLowerCase()}.jpg`}
                     alt={t.name}
                 ></img>
                 <Duck className="organizer-img-placeholder"></Duck>
@@ -53,20 +69,113 @@ class Event extends React.Component {
         ));
     };
 
-    render() {
-        const data = require(`../data/${this.props.year}.json`);
-        const info = this.formatInfo(data);
-        const organizersList = this.createOrganizersList(data.team);
+    createSponsorsList = (sponsors) => {
+        let list = [];
+        if (sponsors.t1)
+            list.push(
+                <div className="sponsor-section t1">
+                    {sponsors.t1.map((s, i) => {
+                        return this.createSponsorElement(s, i, 't1');
+                    })}
+                </div>
+            );
+        if (sponsors.t2)
+            list.push(
+                <div className="sponsor-section t1">
+                    {sponsors.t2.map((s, i) => {
+                        return this.createSponsorElement(s, i, 't2');
+                    })}
+                </div>
+            );
+        if (sponsors.t3)
+            list.push(
+                <div className="sponsor-section t3">
+                    {sponsors.t3.map((s, i) => {
+                        return this.createSponsorElement(s, i, 't3');
+                    })}
+                </div>
+            );
+        if (sponsors.t4)
+            list.push(
+                <div className="sponsor-section t4">
+                    {sponsors.t4.map((s, i) => {
+                        return this.createSponsorElement(s, i, 't4');
+                    })}
+                </div>
+            );
+        return list;
+    };
 
-        const hasDevpost = data.devpost ? '' : 'hidden';
-        const hasWebsite = data.site ? '' : 'hidden';
+    createSponsorElement = (sponsor, i, tier) => {
+        return (
+            <a className="sponsor-container" href={sponsor.website} alt={sponsor.name} key={`${i}-${sponsor.name}`}>
+                <img
+                    className={`sponsor-img ${tier}`}
+                    src={`${imageDb}/sponsors/${sponsor.name}.${sponsor.svg ? 'svg' : 'png'}`}
+                    alt={sponsor.name}
+                ></img>
+            </a>
+        );
+    };
+
+    createExpensesTable = (sponsors) => {
+        console.log(possibleColors);
+        return (
+            <table className="expenses-table">
+                {sponsors.numbers.map((s, i) => (
+                    <tr>
+                        <td style={{ backgroundColor: String(possibleColors[i]) }}>{s.name}</td>
+                        <div>{console.log([i])}</div>
+                        <td className="expense-value">{`$${s.value.toFixed(2)}`}</td>
+                    </tr>
+                ))}
+            </table>
+        );
+    };
+
+    componentDidMount() {
+        // Create the expenses chart
+        if (this.data.sponsors === undefined) return;
+
+        const numbers = this.data.sponsors.numbers;
+        Chart.defaults.font.size = 16;
+        const total = numbers.reduce((a, i) => a + i.value, 0);
+
+        const config = {
+            type: 'pie',
+            data: {
+                labels: numbers.map((n) => n.name),
+                datasets: [
+                    {
+                        label: `Expenses ${this.props.year}`,
+                        data: numbers.map((n) => (100 * n.value) / total),
+                        backgroundColor: possibleColors.slice(0, numbers.length),
+                    },
+                ],
+            },
+        };
+        new Chart(this.chart.current, config);
+    }
+
+    render() {
+        const info = this.formatInfo(this.data);
+        const organizersList = this.createOrganizersList(this.data.team);
+        let sponsorList = null;
+        let expensesTable = null;
+        if (this.data.sponsors) {
+            sponsorList = this.createSponsorsList(this.data.sponsors);
+            expensesTable = this.createExpensesTable(this.data.sponsors);
+        }
+
+        const hasDevpost = this.data.devpost ? '' : 'hidden';
+        const hasWebsite = this.data.site ? '' : 'hidden';
 
         return (
             <div className="event">
                 <img
                     className="event-header"
                     alt={`${this.props.year} header`}
-                    src={`${imageDb}/${this.props.year}.png`}
+                    src={`${imageDb}/events/${this.props.year}.png`}
                     onClick={this.toggleDropdown}
                 ></img>
                 <div className={`event-dropdown ${this.state.dropdown ? 'active' : ''}`}>
@@ -87,10 +196,10 @@ class Event extends React.Component {
                                 Sponsors
                             </button>
                         </div>
-                        <a className={`event-dropdown-link devpost ${hasDevpost}`} href={data.devpost}>
+                        <a className={`event-dropdown-link devpost ${hasDevpost}`} href={this.data.devpost}>
                             Devpost
                         </a>
-                        <a className={`event-dropdown-link website ${hasWebsite}`} href={data.site}>
+                        <a className={`event-dropdown-link website ${hasWebsite}`} href={this.data.site}>
                             Website
                         </a>
                     </div>
@@ -98,7 +207,22 @@ class Event extends React.Component {
                         <div className="event-organizers-list">{organizersList}</div>
                     </div>
                     <div className={`event-dropdown-section sponsors ${this.state.toggle}`}>
-                        <div className="event-sponsors">Sponsors WIP</div>
+                        <div className="event-sponsors">
+                            {this.data.sponsors ? (
+                                <>
+                                    <div className="sponsor-half">
+                                        <p className="pie-chart-title">Expenses Breakdown</p>
+                                        <div className="pie-chart-container">
+                                            <canvas ref={this.chart} className="pie-chart"></canvas>
+                                        </div>
+                                        {expensesTable}
+                                    </div>
+                                    <div className="sponsor-logos sponsor-half">{sponsorList}</div>
+                                </>
+                            ) : (
+                                <p className="sponsor-empty">No sponsor information yet!</p>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
