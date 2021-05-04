@@ -25,7 +25,6 @@ All the data is in the `data` folder, sorted by years. Each data file will conta
             "name": "Name of team member to display",
             "position": "Position of team member to display",
             "link": "(optional) Link to site/github/linkedin/etc to go to when clicked on",
-            "img": "(optional) Name of image in image folder"
         },
         {
             // team memeber 2
@@ -34,6 +33,8 @@ All the data is in the `data` folder, sorted by years. Each data file will conta
     ]
 }
 ```
+
+For images, place the images with the format `first-last.jpg` in the folder specified by `imageDb` in `event.js`.
 
 ## Available Scripts
 

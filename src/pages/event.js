@@ -39,7 +39,13 @@ class Event extends React.Component {
                 key={`${i}-${t.name}`}
                 onClick={this.openLink.bind(this, t.link)}
             >
-                <img className="organizer-img" src={t.img ? `${imageDb}/${t.img}` : ''} alt={t.name}></img>
+                {/* Essentially, the image is always at /first-last.jpg */}
+                {/* This will BREAK if 2 people share the same name!!! */}
+                <img
+                    className="organizer-img"
+                    src={`${imageDb}/${t.name.replace(' ', '-').toLowerCase()}.jpg`}
+                    alt={t.name}
+                ></img>
                 <Duck className="organizer-img-placeholder"></Duck>
                 <p className="organizer-name">{t.name}</p>
                 <p className="organizer-position">{t.position}</p>
