@@ -92,5 +92,32 @@
             "name": "Harsha Kota",
             "position": "Design"
         }
-    ]
+    ],
+    "sponsors": {
+        "t1": [{ "name": "linode", "website": "https://linode.com", "svg": true }],
+        "t2": [
+            { "name": "balsamiq", "website": "https://balsamiq.com", "svg": true },
+            { "name": "stoke", "website": "https://stokedenton.com" }
+        ],
+        "t3": [
+            { "name": "1password", "website": "https://1password.com" },
+            { "name": "aops", "website": "https://artofproblemsolving.com" },
+            { "name": "ben-taylor", "website": "https://nationalpoetryday.co.uk/poem/high-flight" },
+            { "name": "echoar", "website": "https://echoar.xyz" },
+            { "name": "egghead", "website": "https://egghead.io" },
+            { "name": "hackclubbank", "website": "https://hackclub.com/bank", "svg": true },
+            { "name": "interview-cake", "website": "https://interviewcake.com" },
+            { "name": "replit", "website": "https://replit.com", "svg": true },
+            { "name": "sashido", "website": "https://sashido.io/en" },
+            { "name": "sticker-mule", "website": "https://stickermule.com", "svg": true },
+            { "name": "streamyard", "website": "https://streamyard.com", "svg": true },
+            { "name": "wolfram", "website": "https://wolfram.com/language" }
+        ],
+        "numbers": [
+            { "name": "Shirts", "value": 1060.0 },
+            { "name": "Prizes", "value": 985.36 },
+            { "name": "Shipping & Handling", "value": 754.1 },
+            { "name": "Other", "value": 62.0 }
+        ]
+    }
 }
