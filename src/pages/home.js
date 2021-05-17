@@ -11,10 +11,21 @@ class Home extends React.Component {
 
     handleEmailChange = (event) => this.setState({ email: event.target.value });
 
-    submit = () => {
-        alert(`Entered email: ${this.state.email}`);
-        this.setState({ email: '' });
-        // TODO: Make this button ACTUALLY submit the email lol
+    submit = async () => {
+        const response = await fetch('https://backend.hacktams.org/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: this.state.email }),
+        });
+        if (response.status === 200) {
+            alert(`Thank you for subscribing to our newsletter! Email: ${this.state.email}`);
+            this.setState({ email: '' });
+        } else {
+            const err = await response.json();
+            alert(err.message);
+        }
     };
 
     render() {
