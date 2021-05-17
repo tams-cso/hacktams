@@ -7,6 +7,7 @@
 /* Headers should be 200px x 800px */
 .event-header {
     height: 200px;
+    width: 800px;
     margin: 0 auto;
 
     display: block;
@@ -86,7 +87,7 @@
     position: relative;
     z-index: 5;
     border: none;
-    
+
     font-size: 1rem;
     background-color: transparent;
     transition: 0.5s;
@@ -149,11 +150,6 @@
     position: relative; /* Needed to make img placeholder work */
 }
 
-.organizer-group:hover .organizer-name {
-    font-size: 1.5rem;
-    color: var(--text-1)
-}
-
 .organizer-group.clickable {
     cursor: pointer;
 }
@@ -162,27 +158,41 @@
     width: 5rem;
     height: 5rem;
     margin: auto;
+    position: relative;
+    z-index: 1;
 
     object-fit: cover;
     display: block;
     border: 1px solid white;
     color: transparent;
+    transition: 0.3s;
 }
 
 .organizer-img-placeholder {
     width: 4rem;
     height: 4rem;
     position: absolute;
+
     left: 50%;
     margin-left: -2rem;
     top: 0.5rem;
+
+    transition: 0.3s;
+}
+
+.organizer-group:hover .organizer-img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.organizer-group:hover .organizer-img-placeholder {
+    top: 1rem;
 }
 
 .organizer-name {
     margin: 0.25rem;
     font-size: 1.25rem;
     font-weight: 700;
-    transition: 0.3s;
 }
 
 .organizer-position {
@@ -195,4 +205,67 @@
 .event-sponsors {
     margin-top: 1rem;
     text-align: center;
+    display: flex;
+}
+
+.sponsor-half {
+    flex-basis: 50%;
+}
+
+.sponsor-section {
+    margin: 1rem 0;
+}
+
+.sponsor-img {
+    height: 9rem;
+    margin: 1rem;
+    transition: 0.3s;
+}
+
+.sponsor-img.t2 {
+    height: 4rem;
+}
+
+.sponsor-img.t3 {
+    height: 2rem;
+}
+
+.sponsor-img:hover {
+    transform: scale(1.1);
+}
+
+.pie-chart-title {
+    margin: 0 0 0.5rem;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-family: var(--title-font);
+}
+
+.pie-chart-container {
+    width: 50%;
+    margin: auto;
+}
+
+.expenses-table {
+    margin: auto;
+    margin-top: 0.5rem;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table,
+td {
+    border: 2px solid white;
+}
+
+td {
+    padding: 0.25rem 0.75rem;
+    color: white;
+    font-weight: 700;
+}
+
+.expense-value {
+    color: #555;
+    font-weight: 300;
 }

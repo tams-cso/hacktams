@@ -8,6 +8,53 @@ This is the official site for hackTAMS! Feel free to look around and make a pull
 
 To install, clone the repository and run `yarn install`.
 
+### Configuration
+
+All the data is in the `data` folder, sorted by years. Each data file will contain the following information:
+
+```json
+{
+    "year": "YYYY",
+    "dates": "Month [Start Date]-[End Date]",
+    "participants": 2147483647,
+    "projects": 42,
+    "devpost": "Link to devpost",
+    "site": "Link to website",
+    "team": [
+        {
+            "name": "Name of team member to display",
+            "position": "Position of team member to display",
+            "link": "(optional) Link to site/github/linkedin/etc to go to when clicked on"
+        },
+        {
+            // team memeber 2
+        }
+        // etc
+    ],
+    "sponsors": {
+        "t1": [
+            {
+                "name": "Name of sponsor -- this should correspond to the image name",
+                "website": "Link to the website of the sponsor",
+                "svg": "(optional) true as BOOLEAN value if the image is an svg (default is a png)"
+            }
+            // Other tier 1 sponsors
+        ],
+        "tn": [], // where n is the tier number -- this is programmed to go down to tier 3 currently (see 2020.json)
+        // etc
+        "numbers": [
+            {
+                "name": "Name of expense",
+                "value": "Price of this expense"
+            }
+            // Other expenses
+        ]
+    }
+}
+```
+
+For images, place the images with the format `first-last.jpg` in the folder specified by `imageDb` in `event.js`.
+
 ## Available Scripts
 
 In the project directory, you can run:

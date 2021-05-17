@@ -1,28 +1,55 @@
 /*Footer stuff*/
 .footer {
-    padding: 5rem 15vw 1rem;
+    padding: 5rem 0 0;
     text-align: center;
     background-color: var(--sea);
 }
 
 .footer-info {
-    margin: 0 10vw;
-    padding: 0.5rem 0;
-    font-size: 1rem;
+    margin: 0 5vw 3rem;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .footer-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .footer-item {
-    height: 40px;
-    width: 40px;
+    height: 3rem;
+    width: 3rem;
+    padding: 2rem;
+    margin: 0 3rem;
     cursor: pointer;
+    transition: 0.3s;
+    background-image: url('../images/graphics/bubble.svg');
 }
 
 .footer-item:hover {
-    transition: 0.3s;
-    transform: scale(1.15);
+    transform: scale(1.2);
+}
+
+/* Ground */
+
+.footer-ground {
+    position: relative;
+}
+
+.footer-bubbles {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bubble {
+    width: 3rem;
+    /* Offset the bubbles for more percevied randomness */
+    padding: 0.5rem 4.5rem;
+    margin: 0 1rem;
+}
+
+.ground {
+    width: 100%;
+    margin: -5rem 0;
+    display: block;
 }

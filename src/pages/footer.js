@@ -4,6 +4,10 @@ import { ReactComponent as Instagram } from '../images/logos/instagram-icon.svg'
 import { ReactComponent as Twitter } from '../images/logos/twitter-icon.svg';
 import { ReactComponent as Youtube } from '../images/logos/yt-icon.svg';
 import { ReactComponent as LinkedIn } from '../images/logos/linkedin-icon.svg';
+import { ReactComponent as Bubbles1 } from '../images/graphics/bubbles1.svg';
+import { ReactComponent as Bubbles2 } from '../images/graphics/bubbles2.svg';
+import { ReactComponent as Bubbles3 } from '../images/graphics/bubbles3.svg';
+import { ReactComponent as Ground } from '../images/graphics/ground.svg';
 import './footer.css';
 
 class Footer extends React.Component {
@@ -50,6 +54,16 @@ class Footer extends React.Component {
                         className="footer-item"
                         onClick={this.openSite.bind(this, 'https://www.linkedin.com/company/hacktams/')}
                     />
+                </div>
+                <div className="footer-ground">
+                    <div className="footer-bubbles">
+                        <Bubbles3 className="footer-bubble"></Bubbles3>
+                        <Bubbles2 className="footer-bubble"></Bubbles2>
+                        <Bubbles1 className="footer-bubble"></Bubbles1>
+                        <Bubbles3 className="footer-bubble"></Bubbles3>
+                        <Bubbles1 className="footer-bubble"></Bubbles1>
+                    </div>
+                    <Ground className="ground"></Ground>
                 </div>
             </div>
         );
