@@ -4,7 +4,7 @@ import { ReactComponent as Duck } from '../images/graphics/white-duck.svg';
 import Chart from 'chart.js/auto';
 
 // TODO: Replace this with the actual hackTAMS database
-const imageDb = 'https://api.michaelzhao.xyz/static/hacktams';
+const imageDb = 'https://hacktams-backend.s3.us-east-2.amazonaws.com';
 
 // Color preview: https://coolors.co/e76f51-f4a261-e9c46a-2a9d8f-3b429f-2b2d42-5d737e-095256-634b66
 const possibleColors = [
