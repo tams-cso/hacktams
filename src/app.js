@@ -30,6 +30,7 @@ class App extends React.Component {
                 <About reference={this.about} />
                 <div className="events" ref={this.events}>
                     <h1 className="title events-title" id="events">Events</h1>
+                    <Event year="2023" />
                     <Event year="2021" />
                     <Event year="2020" />
                     <Event year="2019" />

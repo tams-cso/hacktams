@@ -1,6 +1,9 @@
 {
     "year": "2021",
-    "dates": "Fall",
+    "dates": "October 23-24",
+    "participants": 37,
+    "projects": 9,
+    "devpost": "https://hacktams-fall-2021.devpost.com",
     "site": "https://2021.hacktams.org/",
     "team": [
         {

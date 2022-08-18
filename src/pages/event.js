@@ -195,10 +195,10 @@ class Event extends React.Component {
                                 Sponsors
                             </button>
                         </div>
-                        <a className={`event-dropdown-link devpost ${hasDevpost}`} href={this.data.devpost}>
+                        <a className={`event-dropdown-link devpost ${hasDevpost}`} href={this.data.devpost} target="_blank" rel="noreferrer">
                             Devpost
                         </a>
-                        <a className={`event-dropdown-link website ${hasWebsite}`} href={this.data.site}>
+                        <a className={`event-dropdown-link website ${hasWebsite}`} href={this.data.site} target="_blank" rel="noreferrer">
                             Website
                         </a>
                     </div>
