@@ -1,0 +1,27 @@
+{
+    "year": "2023",
+    "dates": "February 18-19",
+    "site": "https://2023.hacktams.org/",
+    "team": [
+        {
+            "name": "Kelly Zhou",
+            "position": "Director"
+        },
+        {
+            "name": "Avik Malladi",
+            "position": "Organizer"
+        },
+        {
+            "name": "Lillian Wang",
+            "position": "Organizer"
+        },
+        {
+            "name": "Drishti Gupta",
+            "position": "Organizer"
+        },
+        {
+            "name": "Sachi Hansalia",
+            "position": "Organizer"
+        }
+    ]
+}
